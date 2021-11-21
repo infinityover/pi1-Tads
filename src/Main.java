@@ -13,6 +13,13 @@ public class Main {
             "Olha... Esta resposta não é a correta, mas não tem problemas, você pode tentar acerta-la em outra vida! MUAHAHAHAHA",
             "Parece que você errou e sua vida acaba aqui MUAHAHAHAHA... Brincadeirinha, vamos seguir.",
             "Está..... Incorreta, perdeu tudo o drama do aluno que se ferrou!!! Mentira, vamos seguir os estudos!"));
+
+    private static ArrayList<String> menuList = new ArrayList<>(Arrays.asList(
+            "Jogar",
+            "Instruções",
+            "Créditos",
+            "Sair"));
+
     // Reset
     private static final String RESET = "\033[0m";  // Text Reset
 
@@ -173,16 +180,60 @@ public class Main {
     // Historias
     private static String h1 = "Uhmmm, hoje está um excelente dia para filosofar...";
 
-    public static void main(String[] args) throws InterruptedException {
-		historia(1);
-		pergunta(1);
-		pergunta(2);
-		pergunta(3);
-        pergunta(4);
-        pergunta(5);
-        pergunta(9);
-        pergunta(10);
 
+    public static void main(String[] args) throws InterruptedException {
+        menu();
+
+    }
+
+    public static void menu(){
+
+        Scanner scan = new Scanner(System.in);
+        for (int i = 0; i < menuList.size(); i++) {
+            System.out.println(i+1+") " + menuList.get(i));
+        }
+
+        System.out.print("Selecione para qual opção deseja seguir: ");
+        int resp = scan.nextInt();
+
+        switch (resp){
+            case 1:
+                jogar();
+                break;
+            case 2:
+                instrucoes();
+                break;
+            case 3:
+                creditos();
+                break;
+            case 4:
+                System.exit(0);
+                break;
+            default:
+                System.out.println("Você selecionou uma opção invalida, tente novamente");
+                menu();
+                break;
+        }
+    }
+
+    private static void creditos() {
+        System.out.println("Este jogo foi desenvolvido com esméro por:\n" +
+                "Paulo Belfi\n\n");
+        menu();
+    }
+
+    private static void instrucoes() {
+        System.out.println("O jogo se baseia no genero RPG de texto, será necessario colocar em uso o seu conhecimento de programação\npara responder as mais diversas perguntas sobre desenvolvimento, então2" +
+                " se prepare aventureiro, vamos entrar de cabeça nesse mundo.\n\n");
+        menu();
+    }
+
+    private static void jogar() {
+        try {
+            historia(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     // id = id da historia
