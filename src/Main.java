@@ -136,14 +136,14 @@ public class Main {
             "	}\n" +
             "" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "print" + RESET + "();\n" +
             "}";
-    private static String p7 = "Utilizamos o Switch Case quando nosso codigo tem muitos(as) ? \n";
+    private static String p7 = "Utilizamos o Switch Case quando nosso codigo tem muitos(as)? \n";
     
-    private static String p8 = PURPLE +"import"+ GREEN + "java.util.Scanner;\r\n"
+    private static String p8 = PURPLE +"import "+ GREEN + "java.util.Scanner;\r\n"
     		+ "\r\n"
-    		+ PURPLE+"public class" + GREEN +"jogo {\r\n"
+    		+ PURPLE+"public class " + GREEN +"jogo {\r\n"
     		+ "\r\n"
     		+ PURPLE + "	public static"+" void"+ GREEN + " main"+"(String[]"+ GREEN +" args" +") {\r\n"
-    		+  "int "+ GREEN +"opcoes"+ PURPLE +" ="+ BLUE +" 0" +";\r\n"
+    		+  "    int "+ GREEN +"opcoes"+ PURPLE +" ="+ BLUE +" 0" +";\r\n"
     		+ "\r\n"
     		+ GREEN+"		System.out.println"+WHITE+"(\r\n"
     		+ "				"+ YELLOW +"Você deverá fazer uma apresentação para o final do semestre, onde enfretará o impiedoso OEKAT\\n\"\r\n"
@@ -173,23 +173,15 @@ public class Main {
     		+ PURPLE + "		case"+BLUE+ "4:\r\n"
     		+ GREEN +"			System.out.println"+WHITE+"("+YELLOW+"\"Mas no dia da apresentação você cai e como a nota é individual\"\r\n"
     		+ "					+ \"O impiedoso OEKAT desconta 3 pontos seu, em compensação, seu grupo se deu bem \""+WHITE+");\r\n"
-    		+ "\r\n"
     		+PURPLE +  "			break;\r\n"+WHITE
     		+ "		}\r\n"
-    		+ "\r\n"
     		+ "	}\r\n"
-    		+ "\r\n"
-    		+ "}\r\n"
-    		+ "De acordo com o código acima, podemos afirmar que : " +
+    		+ "}\r\n\n"
+    		+ "De acordo com o código acima, podemos afirmar que : \n" +
             "I) Tem case a mais \n" +
-            "\n" +
             "II) O código está sem a entrada de dados \n" +
-            "\n" +
-            "III) A variável estar errada \n" +
-            "\n" +
-            "IV) Tem case a menos \n" +
-            "\n" +
-            "";
+            "III) A variável está errada \n" +
+            "IV) Tem case a menos \n";
 
     private static String p9 = "No que tange funções podemos descrevê-las como";
 
@@ -311,35 +303,36 @@ public class Main {
     //Função do jogo
     private static void jogar() {
         try {
-            historia(1);
-            setNomeJogador();
-            historia(2);
-            historia(3);
-
-
-            if (desafiosBooleanos(desafio1)) {
-                poderes.add("Perguntar pro Takeo");
-                System.out.println("Você liberou o poder de perguntar para o Takeo, isto poderá ser util em momentos de dificuldades");
-            }
-
-
-            historia(4);
-            if (pergunta(1)) {
-                historia(51);
-            } else {
-                historia(52);
-            }
-
-            if (pergunta(2)) {
-                historia(61);
-            } else {
-                historia(62);
-            }
-
-            if (desafiosBooleanos(desafio2)) {
-                poderes.add("Consultar o livro");
-                System.out.println("Você liberou o poder de consultar o livro, isto pode ser útil em alguma questão que tenha que responder");
-            }
+            pergunta(8);
+//            historia(1);
+//            setNomeJogador();
+//            historia(2);
+//            historia(3);
+//
+//
+//            if (desafiosBooleanos(desafio1)) {
+//                poderes.add("Perguntar pro Takeo");
+//                System.out.println("Você liberou o poder de perguntar para o Takeo, isto poderá ser util em momentos de dificuldades");
+//            }
+//
+//
+//            historia(4);
+//            if (pergunta(1)) {
+//                historia(51);
+//            } else {
+//                historia(52);
+//            }
+//
+//            if (pergunta(2)) {
+//                historia(61);
+//            } else {
+//                historia(62);
+//            }
+//
+//            if (desafiosBooleanos(desafio2)) {
+//                poderes.add("Consultar o livro");
+//                System.out.println("Você liberou o poder de consultar o livro, isto pode ser útil em alguma questão que tenha que responder");
+//            }
 
         } catch (InterruptedException e) {
             e.printStackTrace();
