@@ -103,6 +103,7 @@ public class Main {
 
     private static String desafio1 = "Você assiste as aulas como o Jefferson sugeriu?";
     private static String desafio2 = "Você lê o livro que Jefferson sugeriu?";
+    private static String desafio3 = "Você pede ajuda a Jefferson?";
 
     // Perguntas
     private static String p1 = "Escolha a alternativa correta que descreve o conceito de IF e IF ELSE? \n"
@@ -136,6 +137,11 @@ public class Main {
             "	}\n" +
             "" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "print" + RESET + "();\n" +
             "}";
+
+
+    private static String p5 = "PERGUNTA 5? \n";
+    private static String p6 = "PERGUNTA 6? \n";
+
     private static String p7 = "Utilizamos o Switch Case quando nosso codigo tem muitos(as)? \n";
     
     private static String p8 = PURPLE +"import "+ GREEN + "java.util.Scanner;\r\n"
@@ -211,6 +217,20 @@ public class Main {
             "Ele para todos os laços de repetição que tem dentro do programa."));
 
     private static ArrayList<String> r4 = new ArrayList<>(Arrays.asList(
+            "A estrutura FOR não se deve ter outro FOR dentro.",
+            "O código não está rodando, pois o break deve ser fora do laço de repetição FOR.",
+            "A estrutura não executa, pois a expressão linha + linha está incorreta, para seu código executa se deve considerar: linha++ ou linha = linha + 1.(CERTA RESPOSTA)",
+            "O código não vai rodar, pois o IF dentro do for está sem o ELSE.",
+            "Nenhuma das alternativas, o código está certo."));
+
+    private static ArrayList<String> r5 = new ArrayList<>(Arrays.asList(
+            "A estrutura FOR não se deve ter outro FOR dentro.",
+            "O código não está rodando, pois o break deve ser fora do laço de repetição FOR.",
+            "A estrutura não executa, pois a expressão linha + linha está incorreta, para seu código executa se deve considerar: linha++ ou linha = linha + 1.(CERTA RESPOSTA)",
+            "O código não vai rodar, pois o IF dentro do for está sem o ELSE.",
+            "Nenhuma das alternativas, o código está certo."));
+
+    private static ArrayList<String> r6 = new ArrayList<>(Arrays.asList(
             "A estrutura FOR não se deve ter outro FOR dentro.",
             "O código não está rodando, pois o break deve ser fora do laço de repetição FOR.",
             "A estrutura não executa, pois a expressão linha + linha está incorreta, para seu código executa se deve considerar: linha++ ou linha = linha + 1.(CERTA RESPOSTA)",
@@ -297,42 +317,71 @@ public class Main {
             "-\"Eai (NOME), está curtindo?\"\n" +
             "-\"Estou sim, o pessoal é bem legal\".";
 
-    private static String h92 = "Na mesma semana, você encontra Jefferson, nos corredores da empresa";
+    private static String h92 = "Na mesma semana, você encontra Jefferson, nos corredores da empresa, vocês se cumprimentam e seguem a vida";
+
+    private static String h10 = "-\"Parece que daqui pra frente os exercicios serão mais intensos, então é melhor se preparar\" - diz Enzo, seu colega de PI\n" +
+            "Já para o outro dia já temos mais exercicios para serem feitos.";
+
+    private static String h11 = "Vamos para outro exercício logo em seguida";
+
+    private static String h12 = "Você volta pra casa para descansar durante o fim de semana,\n" +
+            "no domingo você saí para ir pra casa da sua tia Suelita, lá encontra o seu primo Pedro, e comenta com ele que está fazendo faculdade, \n" +
+            "Pedro é desenvolvedor de jogos, e te ajuda a fazer a próxima atividade.";
+
+    private static String h131 = "- \"É isso mesmo (NOME), parabéns, você está aprendendo certinho\" - diz Pedro\n" +
+            "- \"Esse é meu menino\", grita a sua mãe da sala";
 
 
     //Função do jogo
     private static void jogar() {
         try {
-            pergunta(8);
-//            historia(1);
-//            setNomeJogador();
-//            historia(2);
-//            historia(3);
-//
-//
-//            if (desafiosBooleanos(desafio1)) {
-//                poderes.add("Perguntar pro Takeo");
-//                System.out.println("Você liberou o poder de perguntar para o Takeo, isto poderá ser util em momentos de dificuldades");
-//            }
-//
-//
-//            historia(4);
-//            if (pergunta(1)) {
-//                historia(51);
-//            } else {
-//                historia(52);
-//            }
-//
-//            if (pergunta(2)) {
-//                historia(61);
-//            } else {
-//                historia(62);
-//            }
-//
-//            if (desafiosBooleanos(desafio2)) {
-//                poderes.add("Consultar o livro");
-//                System.out.println("Você liberou o poder de consultar o livro, isto pode ser útil em alguma questão que tenha que responder");
-//            }
+            historia(1);
+            setNomeJogador();
+            historia(2);
+            historia(3);
+
+
+            if (desafiosBooleanos(desafio1)) {
+                poderes.add("Perguntar pro Takeo");
+                System.out.println("Você liberou o poder de perguntar para o Takeo, isto poderá ser util em momentos de dificuldades");
+            }
+
+            historia(4);
+            if (pergunta(1)) {
+                historia(51);
+            } else {
+                historia(52);
+            }
+
+            if (pergunta(2)) {
+                historia(61);
+            } else {
+                historia(62);
+            }
+            historia(7);
+            if (desafiosBooleanos(desafio2)) {
+                poderes.add("Consultar o livro");
+                System.out.println("Você liberou o poder de consultar o livro, pode ser que isso seja útil em algum momento");
+            }
+            historia(8);
+            if (pergunta(3)) {
+                historia(91);
+                if (desafiosBooleanos(desafio3)) {
+                    poderes.add("Pedir ajuda a Jefferson");
+                    System.out.println("Você liberou o poder de perguntar ao Jefferson, pode ser que ele te ajude em uma dificuldade");
+                }
+            } else {
+                historia(92);
+            }
+            historia(10);
+            pergunta(4);
+            historia(11);
+            pergunta(5);
+            historia(12);
+            if (pergunta(6)) {
+                historia(13);
+            }
+
 
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -414,6 +463,31 @@ public class Main {
             case 62:
                 imprimir(geraHistoria(h62), tempo);
                 break;
+            case 7:
+                imprimir(geraHistoria(h7), tempo);
+                break;
+            case 8:
+                imprimir(geraHistoria(h8), tempo);
+                break;
+            case 91:
+                imprimir(geraHistoria(h91), tempo);
+                break;
+            case 92:
+                imprimir(geraHistoria(h92), tempo);
+                break;
+            case 10:
+                imprimir(geraHistoria(h1), tempo);
+                break;
+            case 11:
+                imprimir(geraHistoria(h11), tempo);
+                break;
+            case 12:
+                imprimir(geraHistoria(h12), tempo);
+                break;
+            case 131:
+                imprimir(geraHistoria(h131), tempo);
+                break;
+
         }
     }
 
@@ -432,13 +506,25 @@ public class Main {
             case 3:
                 imprimir(p3, tempo);
                 return pontuar(imprimirQuestao(r3,id));
-            case 8:
-                imprimir(p8, tempo);
-                return pontuar(imprimirQuestao(r8, id));
 
             case 4:
                 imprimir(p4, tempo);
                 return pontuar(imprimirQuestao(r4, id));
+            case 5:
+                imprimir(p5, tempo);
+                return pontuar(imprimirQuestao(r5,id));
+            case 6:
+                imprimir(p6, tempo);
+                return pontuar(imprimirQuestao(r6,id));
+
+            case 7:
+                imprimir(p7, tempo);
+                return pontuar(imprimirQuestao(r7, id));
+
+            case 8:
+                imprimir(p8, tempo);
+                return pontuar(imprimirQuestao(r8, id));
+
             case 9:
                 imprimir(p9, tempo);
                 return pontuar(imprimirQuestao(r9, id));
