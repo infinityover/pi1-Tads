@@ -128,6 +128,60 @@ public class Main {
             "	}\n" +
             "" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "print" + RESET + "();\n" +
             "}";
+    private static String p7 = "Utilizamos o Switch Case quando nosso codigo tem muitos(as) ? \n";
+    
+    private static String p8 = PURPLE +"import"+ GREEN + "java.util.Scanner;\r\n"
+    		+ "\r\n"
+    		+ PURPLE+"public class" + GREEN +"jogo {\r\n"
+    		+ "\r\n"
+    		+ PURPLE + "	public static"+" void"+ GREEN + " main"+"(String[]"+ GREEN +" args" +") {\r\n"
+    		+  "int "+ GREEN +"opcoes"+ PURPLE +" ="+ BLUE +" 0" +";\r\n"
+    		+ "\r\n"
+    		+ GREEN+"		System.out.println"+WHITE+"(\r\n"
+    		+ "				"+ YELLOW +"Você deverá fazer uma apresentação para o final do semestre, onde enfretará o impiedoso OEKAT\\n\"\r\n"
+    		+ "						+ \"E terá que escolher uma das opções para se sair bem na apresentação, porém, toda escolha terá uma consequencia\\n\"\r\n"
+    		+ "						+ \"1- Você faz um codigo bem estruturado\\n\"\r\n"
+    		+ "						+ \"2- A história do seu jogo é a melhor e mais criativa\\n\"\r\n"
+    		+ "						+ \"3- Você e seu grupo fizeram varias reuniões e o trabalho está de acordo com o que foi pedido \"\r\n"
+    		+ "						+ \"4- Os testes de código do seu grupo deram todos certos\"\r\n"
+    		+ "						+ \"5- Você sabe tudo sobre o código e caso alguém caia durante a apresentação, você saberá explicar\""+WHITE+");\r\n"
+    		+ "\r\n"
+    		+PURPLE+ "		switch"+WHITE+" ("+ GREEN +"opcoes"+WHITE+") {\r\n"
+    		+ PURPLE +"		case "+ BLUE +"1"+":\r\n"
+    		+ GREEN +"			System.out.println"+WHITE+"("+YELLOW+"\"Mas não faz os testes\""+PURPLE+ "+" + "Assim o impiedoso OEKAT tira 5 pontos do seu grupo\""+");\r\n"
+    		+ PURPLE +"			break"+WHITE+";\r\n"
+    		+ "\r\n"
+    		+PURPLE+ "		case"+ BLUE + " 2:\r\n"
+    		+GREEN + "			System.out.println"+WHITE+"("+YELLOW+"\"Mas no meio da apresentação seu código da uma crashada sem querer\"\r\n"
+    		+ "					+ \"Você até consegue disfarçar, mas o impiedoso OEKAT tira 2 pontos do seu grupo\""+WHITE+");\r\n"
+    		+ PURPLE + "			break"+WHITE+";\r\n"
+    		+ "\r\n"
+    		+PURPLE + "		case"+ BLUE +" 3:\r\n"
+    		+ GREEN + "			System.out.println"+WHITE+"("+YELLOW + "\"Mas no dia da apresentação 3 membros do seu grupo ficam presos no transito\"\r\n"
+    		+ "					+ \"pois está tendo um protesto de crianças que não ganharam um playstation quando ligaram no bom dia e cia\\n\"\r\n"
+    		+ "					+ \"Seu grupo atrasa um pouco a aula e o impiedoso OEKAT tira 1 ponto do seu grupo\""+WHITE+ ");\r\n"
+    		+PURPLE + "			break;\r\n"
+    		+ "\r\n"
+    		+ PURPLE + "		case"+BLUE+ "4:\r\n"
+    		+ GREEN +"			System.out.println"+WHITE+"("+YELLOW+"\"Mas no dia da apresentação você cai e como a nota é individual\"\r\n"
+    		+ "					+ \"O impiedoso OEKAT desconta 3 pontos seu, em compensação, seu grupo se deu bem \""+WHITE+");\r\n"
+    		+ "\r\n"
+    		+PURPLE +  "			break;\r\n"+WHITE
+    		+ "		}\r\n"
+    		+ "\r\n"
+    		+ "	}\r\n"
+    		+ "\r\n"
+    		+ "}\r\n"
+    		+ "De acordo com o código acima, podemos afirmar que : " +
+            "I) Tem case a mais \n" +
+            "\n" +
+            "II) O código está sem a entrada de dados \n" +
+            "\n" +
+            "III) A variável estar errada \n" +
+            "\n" +
+            "IV) Tem case a menos \n" +
+            "\n" +
+            "";
 
     private static String p9 = "No que tange funções podemos descrevê-las como";
 
@@ -162,6 +216,16 @@ public class Main {
             "A estrutura não executa, pois a expressão linha + linha está incorreta, para seu código executa se deve considerar: linha++ ou linha = linha + 1.(CERTA RESPOSTA)",
             "O código não vai rodar, pois o IF dentro do for está sem o ELSE.",
             "Nenhuma das alternativas, o código está certo."));
+    
+    private static ArrayList<String> r7 = new ArrayList<>(Arrays.asList(
+    		"Variáveis", "Bibliotecas importadas", "Laços de repetição", "If else (CERTA RESPOSTA)", "Sysout.out.println"));
+
+    private static ArrayList<String> r8 = new ArrayList<>(Arrays.asList("I e a II estão corretas",
+            "I e IV estão corretas",
+            "II e IV estão corretas(CERTA RESPOSTA)",
+            "II, III e IV estão corretas",
+            "Todas as afirmativas estão corretas"));
+    		
 
     private static ArrayList<String> r9 = new ArrayList<>(Arrays.asList(
             "São partes do código que possuem objetivos específicos, que podem ser chamadas em qualquer parte daquele código, e podem retornar algum valor.(CERTA RESPOSTA)",
@@ -231,6 +295,7 @@ public class Main {
     private static void jogar() {
         try {
             historia(1);
+            pergunta(8);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -263,10 +328,16 @@ public class Main {
                 imprimir(p3, tempo);
                 pontuar(imprimirQuestao(r3));
                 break;
+                
+                
 
             case 4:
                 imprimir(p4, tempo);
                 pontuar(imprimirQuestao(r4));
+                break;
+            case 8:
+                imprimir(p8, tempo);
+                pontuar(imprimirQuestao(r8));
                 break;
             case 9:
                 imprimir(p9, tempo);
