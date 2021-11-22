@@ -6,13 +6,17 @@ import java.util.concurrent.TimeUnit;
 public class Main {
     private static long tempo = 1l;
     private static int pontuacao = 0;
+    private static String nome = "";
 
 
     private static ArrayList<String> erradas = new ArrayList<>(Arrays.asList(
             "Uhmmm, que pena, essa resposta não era a correta, mas vamos seguir mesmo assim.",
             "Olha... Esta resposta não é a correta, mas não tem problemas, você pode tentar acerta-la em outra vida! MUAHAHAHAHA",
             "Parece que você errou e sua vida acaba aqui MUAHAHAHAHA... Brincadeirinha, vamos seguir.",
-            "Está..... Incorreta, perdeu tudo o drama do aluno que se ferrou!!! Mentira, vamos seguir os estudos!"));
+            "Está..... Incorreta, perdeu tudo o drama do aluno que se ferrou!!! Mentira, vamos seguir os estudos!",
+            "ERRRROOUUUU",
+            "Errou feio, erro feio, errou rude"
+            ));
 
     private static ArrayList<String> menuList = new ArrayList<>(Arrays.asList(
             "Jogar",
@@ -94,7 +98,11 @@ public class Main {
     private static final String WHITE_BACKGROUND_BRIGHT = "\033[0;107m";   // WHITE
 
 
+    private static ArrayList<String> poderes = new ArrayList<>(
+            Arrays.asList());
 
+    private static String desafio1 = "Você assiste as aulas como o Jefferson sugeriu?";
+    private static String desafio2 = "Você lê o livro que Jefferson sugeriu?";
 
     // Perguntas
     private static String p1 = "Escolha a alternativa correta que descreve o conceito de IF e IF ELSE? \n"
@@ -107,7 +115,7 @@ public class Main {
     private static String p2 = ("" +
             "O código abaixo mostra a verificação de um processo seletivo de um aluno\n" +
             "Identifique os erros que está impedindo o programa executar corretamente.\n\n" +
-             PURPLE + "elseif " + RESET + "(" + GREEN + "nota " + PURPLE + "== " + BLUE + "10" + RESET + ") {\n"
+            PURPLE + "elseif " + RESET + "(" + GREEN + "nota " + PURPLE + "== " + BLUE + "10" + RESET + ") {\n"
             + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome " + PURPLE + "+ " + YELLOW + "\" Parabéns você ganhou uma bolsa de estudos\"" + RESET + ");\n"
             + "} " + PURPLE + "else if " + RESET + "(" + GREEN + "nota " + PURPLE + "> " + BLUE + "7" + PURPLE + " && " + GREEN + "nota " + PURPLE + "< " + BLUE + "10" + RESET + ") {\n"
             + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome + " + YELLOW + "\"você ganhou 20% de desconto na mensalidade\"" + RESET + ");\n"
@@ -120,8 +128,8 @@ public class Main {
     private static String p3 = "Escolha a opção que descreve como o break funciona quando é utilizado dentro de um laço de repetição aninhado.";
 
     private static String p4 = "O laço de repetição abaixo está formando uma metade de uma pirâmide, sendo criada por linhas e colunas. Porém o código não está rodando, o porquê o laço de repetição for não está rodando?\n"
-            +PURPLE+"for " + RESET + "(int" + GREEN + " linha " + PURPLE + "= " + BLUE + "0" + RESET + "; " + GREEN + "linha" + PURPLE + " < " + BLUE + "10" + RESET + "; " + GREEN + "linha " + PURPLE + "+" + GREEN + " linha" + RESET + "){\n" +
-            PURPLE+"    for " + RESET + "(int" + GREEN + " coluna " + PURPLE + "= " + BLUE + "0" + RESET + "; " + GREEN + "coluna" + PURPLE + " <= " + BLUE + "10" + RESET + "; " + GREEN + "coluna" + PURPLE + "++"+ RESET + "){\n" +
+            + PURPLE + "for " + RESET + "(int" + GREEN + " linha " + PURPLE + "= " + BLUE + "0" + RESET + "; " + GREEN + "linha" + PURPLE + " < " + BLUE + "10" + RESET + "; " + GREEN + "linha " + PURPLE + "+" + GREEN + " linha" + RESET + "){\n" +
+            PURPLE + "    for " + RESET + "(int" + GREEN + " coluna " + PURPLE + "= " + BLUE + "0" + RESET + "; " + GREEN + "coluna" + PURPLE + " <= " + BLUE + "10" + RESET + "; " + GREEN + "coluna" + PURPLE + "++" + RESET + "){\n" +
             "		" + PURPLE + "if " + RESET + "(" + GREEN + "coluna " + PURPLE + "> " + GREEN + "linha" + RESET + ")\n" +
             "			" + PURPLE + "break" + RESET + ";\n" +
             "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "print" + RESET + "(" + YELLOW + "\"*\"" + RESET + ");\n" +
@@ -188,8 +196,8 @@ public class Main {
     private static String p10 = "Qual o erro do código abaixo?\n" + PURPLE + " static void " + GREEN + "soma" + YELLOW + "(" + PURPLE + "int" + RESET + " a, " + PURPLE + "int" + RESET + " b" + YELLOW + ")" + WHITE + "{\n" +
             "   " + PURPLE + "return " + WHITE + "a+b;\n" +
             "}" + RESET;
-    // Respostas
 
+    // Respostas
     private static ArrayList<String> r1 = new ArrayList<>(Arrays.asList("(I e II e VI) Estão corretas",
             "(I e II e III) Estão corretas",
             "(II e V) Estão corretas (CERTA RESPOSTA)",
@@ -241,26 +249,118 @@ public class Main {
             "Problema com o tipo de retorno(CERTA RESPOSTA)",
             "Falta public no início da função",
             "Não tem problemas"));
-    // Historias
-    private static String h1 = "Uhmmm, hoje está um excelente dia para filosofar...";
 
+    private static ArrayList<String> ajudas = new ArrayList<>(Arrays.asList(
+            "Lembre-se o IF é uma estrutura para tomadas de decisão (se isso, faça isso)",
+            "Veja, sempre um se, depois um senão, e nos se, devem ser envolvidos por parênteses",
+            "O break, é uma instrução para parar a execução atual",
+            "For's são laços de repetição, e como todo laço de repetição é necessário haver um metódo de sair dele, para evitar o loop infinito",
+            "R5",
+            "R6",
+            "R7",
+            "R8",
+            "Funções são estruturas que utilizamos para organizar o nosso código e realizar tarefas com mais clareza",
+            "Para funções são necessários tipos de retornos condizentes com o que o código está fazendo"));
+
+
+    // Historias
+    private static String h1 = "Você acorda obstinado para um novo dia em seu emprego.\n" +
+            "Como sempre está infeliz com o seu chefe pegando no seu pé dia sim, dia também.\nLogo que chega pela manhã no escritório encontra Renata, então ela diz:" +
+            "Bom dia ____________";
+
+    private static String h2 = "- \"Bom dia (NOME), pronto pra mais um dia do Claudio (Seu chefe), pegando no seu pé? rs\" diz Renata. \n" +
+            "- \"Ficou sabendo de ontem?!? Ele simplesmente implicou comigo por que eu cheguei 5 minutos atrasado do almoço, assim não tá dando,\n vou tentar sair área ou procurar um novo emprego, fiquei sabendo que TI é uma área legal, o pessoal parace ser maluco, mas gente boa\" \n" +
+            "- \"Pois é menino, esse Claudio ta passando dos limites... Enfim acho que se quer isso, deveria tentar mesmo, eu conheço um rapaz da área de TI, vou te passar o contato dele, para vocês trocarem figurinhas.\"";
+
+    private static String h3 = "Nessa mesma tarde Renata adiciona você e Jefferson em um grupo para se conversarem\n" +
+            "-\"Opa Jefferson, esse daí é o (NOME), é o rapaz que eu te falei que está tentando entrar na sua área, e ainda não conhece muita coisa, você poderia dar o caminho das pedras pra ele?\"\n" +
+            "-\"Claro que sim Renatinha, o que que você não me pede chorando que eu não faça rindo?!?\"\n" +
+            "-\"Fala (NOME), tudo certo? Cara vou te passar algumas coisas pra tu ir estudando e ver se gosta da área e tal, você já viu as videoaulas do Takeo na internet? São bem boas ele passa um conteúdo legal pra quem está começando\"\n";
+
+    private static String h4 = "Se passa uma semana, desde a sua conversa com Jefferson\n" +
+            "-\"Fala (NOME), como que tu tá?\" pergunta, Jefferson\n" +
+            "-\"Ahh tamo aí né meu...\" você responde \n" +
+            "-\"Assim que é bom, animado igual um leão faminto na savana africana, ahahahah, enfim, depois de uma semana,\n" +
+            " acho que deu tempo de tu estudar algumas coisas, vamos a nossa primeira pergunta, para eu poder saber se você aprendeu algo nesse tempo ou ainda nada.\"\n";
+
+    private static String h51 = "-\"Eita, então você é o bixão mesmo ein. Parece que estudou pelo menos um pouco, vamos ver se você aprendeu mesmo sobre esse tema\n";
+
+    private static String h52 = "-\"É... Como deve ter percebido até o narrador está tirando uma com a sua cara, e você vai fazer o que com isso? \n" +
+            "Euuuuu particularmente não deixava...\" - diz Jefferson \n" +
+            "\"E eu digo mais... Mais\" - diz o narrador" +
+            "\"Bom deixando a zueira de lado, vamos continuar aqui com os nossos desafios\" - dispara Jefferson";
+
+    private static String h61 = "-\"Você estou bem então... Vamos vou te passar uma recomendação de livro pra tu dar uma olhada,\n mas mesmo assim eu te aconselho a se inscrever em um curso para poder se aprimorar nisso.\n";
+
+    private static String h62 = "-\"Pois é, o narrador, parece estar te zuando mesmo. Enfim, parece que você até estudou," +
+            "\n mas não o tanto que deveria, vou te recomendar estudar mais, e tambem dar uma olhada em algumas referencias de livros por aí \"\n";
+
+    private static String h7 = "Na mesma noite, você corre para o computador assim que chega em casa, para dar um olhada nos cursos que existem dentro da área,\n você percebe que gestão em TI, não é muito a sua cara, nem Bacharel em ciências da computação.\n" +
+            "Já tecnólogo em analise e desenvolvimento de sistemas, se encaixa perfeitmente no que você esperava, como é maio, você já corre para fazer a sua inscrição, e passa no vestibular.\n" +
+            "Logo nas primeiras semanas, você se enturma, e essas pessoas serão o seu grupo de PI";
+
+    private static String h8 = "Uma das suas primeiras tarefas vem a seguir, é uma ADO de PI.";
+
+    private static String h91 = "Na mesma semana, você encontra Jefferson, nos corredores da empresa, e comenta que está fazendo faculdade.\n" +
+            "-\"Eai (NOME), está curtindo?\"\n" +
+            "-\"Estou sim, o pessoal é bem legal\".";
+
+    private static String h92 = "Na mesma semana, você encontra Jefferson, nos corredores da empresa";
+
+
+    //Função do jogo
+    private static void jogar() {
+        try {
+            historia(1);
+            setNomeJogador();
+            historia(2);
+            historia(3);
+
+
+            if (desafiosBooleanos(desafio1)) {
+                poderes.add("Perguntar pro Takeo");
+                System.out.println("Você liberou o poder de perguntar para o Takeo, isto poderá ser util em momentos de dificuldades");
+            }
+
+
+            historia(4);
+            if (pergunta(1)) {
+                historia(51);
+            } else {
+                historia(52);
+            }
+
+            if (pergunta(2)) {
+                historia(61);
+            } else {
+                historia(62);
+            }
+
+            if (desafiosBooleanos(desafio2)) {
+                poderes.add("Consultar o livro");
+                System.out.println("Você liberou o poder de consultar o livro, isto pode ser útil em alguma questão que tenha que responder");
+            }
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args) throws InterruptedException {
         menu();
 
     }
 
-    public static void menu(){
+    public static void menu() {
 
         Scanner scan = new Scanner(System.in);
         for (int i = 0; i < menuList.size(); i++) {
-            System.out.println(i+1+") " + menuList.get(i));
+            System.out.println(i + 1 + ") " + menuList.get(i));
         }
-
         System.out.print("Selecione para qual opção deseja seguir: ");
         int resp = scan.nextInt();
 
-        switch (resp){
+        switch (resp) {
             case 1:
                 jogar();
                 break;
@@ -280,85 +380,90 @@ public class Main {
         }
     }
 
+    //Imprime créditos
     private static void creditos() {
         System.out.println("Este jogo foi desenvolvido com esméro por:\n" +
                 "Paulo Belfi\n\n");
         menu();
     }
 
+    //Imprime as instruções do jogo
     private static void instrucoes() {
         System.out.println("O jogo se baseia no genero RPG de texto, será necessario colocar em uso o seu conhecimento de programação\npara responder as mais diversas perguntas sobre desenvolvimento, então2" +
                 " se prepare aventureiro, vamos entrar de cabeça nesse mundo.\n\n");
         menu();
     }
 
-    private static void jogar() {
-        try {
-            historia(1);
-            pergunta(8);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
     // id = id da historia
     public static void historia(int id) throws InterruptedException {
         switch (id) {
             case 1:
-                imprimir(h1, tempo);
-
+                imprimir(geraHistoria(h1), tempo);
+                break;
+            case 2:
+                imprimir(geraHistoria(h2), tempo);
+                break;
+            case 3:
+                imprimir(geraHistoria(h3), tempo);
+                break;
+            case 4:
+                imprimir(geraHistoria(h4), tempo);
+                break;
+            case 51:
+                imprimir(geraHistoria(h51), tempo);
+                break;
+            case 52:
+                imprimir(geraHistoria(h52), tempo);
+                break;
+            case 61:
+                imprimir(geraHistoria(h61), tempo);
+                break;
+            case 62:
+                imprimir(geraHistoria(h62), tempo);
+                break;
         }
     }
 
     // id = id da pergunta
-    public static void pergunta(int id) throws InterruptedException {
+    public static boolean pergunta(int id) throws InterruptedException {
         switch (id) {
 
             case 1:
                 imprimir(p1, tempo);
-                pontuar(imprimirQuestao(r1));
-                break;
+                return pontuar(imprimirQuestao(r1, id));
 
             case 2:
                 imprimir(p2, tempo);
-                pontuar(imprimirQuestao(r2));
-                break;
+                return pontuar(imprimirQuestao(r2, id));
 
             case 3:
                 imprimir(p3, tempo);
-                pontuar(imprimirQuestao(r3));
-                break;
-                
-                
+                return pontuar(imprimirQuestao(r3,id));
+            case 8:
+                imprimir(p8, tempo);
+                return pontuar(imprimirQuestao(r8, id));
 
             case 4:
                 imprimir(p4, tempo);
-                pontuar(imprimirQuestao(r4));
-                break;
-            case 8:
-                imprimir(p8, tempo);
-                pontuar(imprimirQuestao(r8));
-                break;
+                return pontuar(imprimirQuestao(r4, id));
             case 9:
                 imprimir(p9, tempo);
-                pontuar(imprimirQuestao(r9));
-                break;
+                return pontuar(imprimirQuestao(r9, id));
             case 10:
                 imprimir(p10, tempo);
-                pontuar(imprimirQuestao(r10));
-                break;
-//		case 5:
-//			imprimir(p5, tempo);
-//			System.out.println(imprimirQuestao(r5));
+                return pontuar(imprimirQuestao(r10, id));
+            default:
+                return false;
         }
     }
 
-    public static void pontuar(boolean acertou) throws InterruptedException {
+    public static boolean pontuar(boolean acertou) throws InterruptedException {
         if (acertou) {
             pontuacao++;
         } else {
             imprimirRespostaErrada(erradas, tempo);
         }
+        return acertou;
     }
 
     //Recebe o texto a ser impresso e em qual velocidade devem ser digitadas as letras
@@ -384,16 +489,16 @@ public class Main {
 
 
     //Recebe o array de perguntas a serem impressas sem as suas letras correspondentes
-    public static boolean imprimirQuestao(ArrayList<String> perguntas) {
+    public static boolean imprimirQuestao(ArrayList<String> respostas, int id) {
         Scanner scan = new Scanner(System.in);
         //embaralha as perguntas para não ser sempre a mesma opção
-        Collections.shuffle(perguntas);
+        Collections.shuffle(respostas);
         String respostaCerta = "";
         ArrayList<String> listaRespostas = new ArrayList<>();
 
-        for (int i = 0; i < perguntas.size(); i++) {
+        for (int i = 0; i < respostas.size(); i++) {
             //Verifica qual é a resposta correta após o embaralhamento
-            if (perguntas.get(i).indexOf("(CERTA RESPOSTA)") != -1) {
+            if (respostas.get(i).indexOf("(CERTA RESPOSTA)") != -1) {
                 respostaCerta = Character.toString((char) i + 97);
             }
 
@@ -403,16 +508,61 @@ public class Main {
 
             //imprime a pergunta removendo o marcador de certa resposta
             System.out.println(
-                    Character.toString((char) i + 97) + ") " + perguntas.get(i).replaceAll("\\(CERTA RESPOSTA\\)", ""));
+                    Character.toString((char) i + 97) + ") " + respostas.get(i).replaceAll("\\(CERTA RESPOSTA\\)", ""));
         }
-        System.out.print("A resposta correta é: ");
+        System.out.print("Digite qual a resposta correta, ou (P) para usar seus poderes: ");
         String resp = scan.next();
+        if (resp.toUpperCase(Locale.ROOT).equals("P")) {
+            if (poderes.size() == 0) {
+                System.out.println("Você não tem poderes, teremos que seguir sem utilizar ajuda.");
+                return imprimirQuestao(respostas, id);
+            }
+            imprimePoderes();
+            System.out.println(ajudas.get(id - 1));
+            poderes.remove(id - 1);
+            return imprimirQuestao(respostas, id);
+        }
         //verifica se a resposta dada é válida ao conjunto de respostas validas
-        if (listaRespostas.indexOf(resp) == -1) {
+        else if (listaRespostas.indexOf(resp) == -1) {
             System.out.println("Esta resposta é inválida, tente apenas respostas validas.\nTente novamente.\n\n");
-            imprimirQuestao(perguntas);
+            imprimirQuestao(respostas, id);
         }
         return respostaCerta.toUpperCase(Locale.ROOT).equals(resp.toUpperCase(Locale.ROOT));
     }
 
+    private static int imprimePoderes() {
+        Scanner scan = new Scanner(System.in);
+
+        for (int i = 0; i < poderes.size(); i++) {
+            System.out.println(Character.toString((char) i + 97) + ") " + poderes.get(i));
+        }
+        System.out.print("Selecione qual poder deseja utilizar: ");
+        String resp = scan.next();
+        //verifica se a resposta dada é válida ao conjunto de respostas validas
+        if (resp.toLowerCase(Locale.ROOT).toCharArray()[0] - 97 == -1) {
+            System.out.println("Este poder não existe, tente novamente");
+            return imprimePoderes();
+        }
+        return resp.toLowerCase(Locale.ROOT).toCharArray()[0] - 97;
+    }
+
+
+    //Função para setar o nome do jogador
+    public static void setNomeJogador() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Digite o seu nome para continuarmos");
+        nome = scan.next();
+    }
+
+    public static String geraHistoria(String texto) {
+        return texto.replaceAll("\\(NOME\\)", nome);
+    }
+
+    public static boolean desafiosBooleanos(String pergunta) {
+        System.out.println(pergunta);
+        System.out.println("Responda com S (Sim) ou N (Não): ");
+        Scanner scan = new Scanner(System.in);
+
+        return scan.next().toUpperCase(Locale.ROOT).equals("S");
+    }
 }
