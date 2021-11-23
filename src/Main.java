@@ -47,10 +47,10 @@ public class Main {
 
     private static String p3 = "Escolha a alternativa correta que descreve o conceito de IF e IF ELSE? \n"
             + "I)   A estrutura IF executa um comando sempre que a condição seja falsa\n"
-            + "II)  A estrutura IF executa um comando quando a condicional seja verdadeira correta\n"
+            + "II)  A estrutura IF executa um comando quando a condicional é verdadeira \n"
             + "III) Podemos afirmar que o IF ELSE executa o comando e depois faz a verificação\n"
             + "IV)  A estrutura IF ELSE executa um conjunto de comandos caso a condição IF seja falsa\n"
-            + "V)   Podemos afirmar que IF ELSE é utilizado para o teste de múltiplos caso seria IF ELSE aninhado correta\n";
+            + "V)   Podemos afirmar que IF ELSE é utilizado para o teste de múltiplos caso seria IF ELSE aninhado\n";
 
     private static String p4 = ("" +
             "O código abaixo mostra a verificação de um processo seletivo de um aluno\n" +
@@ -63,9 +63,9 @@ public class Main {
             + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome + " + YELLOW + "\"você ganhou desconto de 10% na mensalidade\"" + RESET + ");\n"
             + "} " + PURPLE + "else if " + RESET + "(" + GREEN + "nota " + PURPLE + "<=" + BLUE + "5" + PURPLE + " || " + GREEN + "nota " + PURPLE + "== " + BLUE + "0" + RESET + ") {\n"
             + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome + " + YELLOW + "\"Infelizmente você não Passou no processo seletivo\"" + RESET + ");\n"
-            + "}\n");
+            + "}\n\n");
 
-    private static String p5 = "Escolha a opção que descreve como o break funciona quando é utilizado dentro de um laço de repetição aninhado.";
+    private static String p5 = "\nEscolha a opção que descreve como o break funciona quando é utilizado dentro de um laço de repetição aninhado.";
 
     private static String p6 = "O laço de repetição abaixo está formando uma metade de uma pirâmide, sendo criada por linhas e colunas. Porém o código não está rodando, o porquê o laço de repetição for não está rodando?\n"
             + PURPLE + "for " + RESET + "(int" + GREEN + " linha " + PURPLE + "= " + BLUE + "0" + RESET + "; " + GREEN + "linha" + PURPLE + " < " + BLUE + "10" + RESET + "; " + GREEN + "linha " + PURPLE + "+" + GREEN + " linha" + RESET + "){\n" +
@@ -591,7 +591,7 @@ public class Main {
                     Character.toString((char) i + 97) + ") " + respostas.get(i).replaceAll("\\(CERTA RESPOSTA\\)", ""));
         }
         //le a resposta do jogador
-        System.out.print("Digite qual a resposta correta, ou (P) para usar seus poderes: ");
+        System.out.print("\nDigite qual a resposta correta, ou (P) para usar seus poderes:");
         String resp = scan.next();
 
         //controle de ajudas
