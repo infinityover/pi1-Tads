@@ -91,13 +91,14 @@ public class Main {
             + "						+ \"E terá que escolher uma das opções para se sair bem na apresentação, porém, toda escolha terá uma consequencia\\n\"\r\n"
             + "						+ \"1- Você faz um codigo bem estruturado\\n\"\r\n"
             + "						+ \"2- A história do seu jogo é a melhor e mais criativa\\n\"\r\n"
-            + "						+ \"3- Você e seu grupo fizeram varias reuniões e o trabalho está de acordo com o que foi pedido \"\r\n"
-            + "						+ \"4- Os testes de código do seu grupo deram todos certos\"\r\n"
-            + "						+ \"5- Você sabe tudo sobre o código e caso alguém caia durante a apresentação, você saberá explicar\"" + WHITE + ");\r\n"
+            + "						+ \"3- Você e seu grupo fizeram varias reuniões e o trabalho está de acordo com o que foi pedido\\n \"\r\n"
+            + "						+ \"4- Os testes de código do seu grupo deram todos certos\\n\"\r\n"
+            + "						+ \"5- Você sabe tudo sobre o código e caso alguém caia durante a apresentação, você saberá explicar\\n\"" + WHITE + ");\r\n"
             + "\r\n"
             + PURPLE + "		switch" + WHITE + " (" + GREEN + "opcoes" + WHITE + ") {\r\n"
             + PURPLE + "		case " + BLUE + "1" + ":\r\n"
-            + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas não faz os testes\"" + PURPLE + "+" + "Assim o impiedoso OEKAT tira 5 pontos do seu grupo\"" + ");\r\n"
+            + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas não faz os testes\""
+            + "\n                   + \"Assim o impiedoso OEKAT tira 5 pontos do seu grupo\"" + ");\r\n"
             + PURPLE + "			break" + WHITE + ";\r\n"
             + "\r\n"
             + PURPLE + "		case" + BLUE + " 2:\r\n"
@@ -107,7 +108,7 @@ public class Main {
             + "\r\n"
             + PURPLE + "		case" + BLUE + " 3:\r\n"
             + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas no dia da apresentação 3 membros do seu grupo ficam presos no transito\"\r\n"
-            + "					+ \"pois está tendo um protesto de crianças que não ganharam um playstation quando ligaram no bom dia e cia\\n\"\r\n"
+            + "					+ \"pois está tendo um protesto de crianças que não ganharam um playstation quando ligaram no bom dia e cia\n\"\r\n"
             + "					+ \"Seu grupo atrasa um pouco a aula e o impiedoso OEKAT tira 1 ponto do seu grupo\"" + WHITE + ");\r\n"
             + PURPLE + "			break;\r\n"
             + "\r\n"
@@ -294,8 +295,8 @@ public class Main {
                 System.out.println("Você liberou o poder de perguntar para o Takeo, isto poderá ser util em momentos de dificuldades");
             }
 
-            historia(4);
-            if (pergunta(1)) {
+            historia(1);
+            if (pergunta(8)) {
                 historia(51);
             } else {
                 historia(52);
