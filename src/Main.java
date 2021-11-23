@@ -34,8 +34,7 @@ public class Main {
     private static final String PURPLE = "\033[0;35m";  // PURPLE
     private static final String WHITE = "\033[0;37m";   // WHITE
 
-    private static ArrayList<String> poderes = new ArrayList<>(
-            Arrays.asList());
+    private static ArrayList<String> poderes = new ArrayList<>();
 
     private static String desafio1 = "Você assiste as aulas como o Jefferson sugeriu?";
     private static String desafio2 = "Você lê o livro que Jefferson sugeriu?";
@@ -543,36 +542,40 @@ public class Main {
     //Recebe o texto a ser impresso e em qual velocidade devem ser digitadas as letras
     //retorno somente para teste
     public static boolean imprimir(String texto, long tempo) throws InterruptedException {
+        //converte texto para vetor de caracteres, e faz um for pelo texto, imprimindo letra por letra
+        //e esperando um intevalo em milisegundos entre cada letra
         for (Character per : texto.toCharArray()) {
             System.out.print(per);
+            //tempo em millisegundos
             TimeUnit.MILLISECONDS.sleep(tempo);
         }
         System.out.println();
         return true;
     }
 
+    //recebe uma array de possibilidades
     public static boolean imprimirRespostaErrada(ArrayList<String> possiblidades, long tempo) throws InterruptedException {
         Random rand = new Random();
+        //pega uma resposta aleatoria da array de respostas possiveis, e imprime ela
+        //utilizando metodo de impressão digitada
         String texto = possiblidades.get(rand.nextInt(possiblidades.size()));
 
-        for (Character per : texto.toCharArray()) {
-            System.out.print(per);
-            TimeUnit.MILLISECONDS.sleep(tempo);
-        }
-
+        imprimir(texto,tempo);
         System.out.println();
         return true;
     }
-
 
     //Recebe o array de perguntas a serem impressas sem as suas letras correspondentes
     public static boolean imprimirQuestao(ArrayList<String> respostas, int id) {
         Scanner scan = new Scanner(System.in);
         //embaralha as perguntas para não ser sempre a mesma opção
         Collections.shuffle(respostas);
+
         String respostaCerta = "";
         ArrayList<String> listaRespostas = new ArrayList<>();
 
+
+        //laço para imprir as respostas
         for (int i = 0; i < respostas.size(); i++) {
             //Verifica qual é a resposta correta após o embaralhamento
             if (respostas.get(i).indexOf("(CERTA RESPOSTA)") != -1) {
@@ -587,18 +590,26 @@ public class Main {
             System.out.println(
                     Character.toString((char) i + 97) + ") " + respostas.get(i).replaceAll("\\(CERTA RESPOSTA\\)", ""));
         }
+        //le a resposta do jogador
         System.out.print("Digite qual a resposta correta, ou (P) para usar seus poderes: ");
         String resp = scan.next();
+
+        //controle de ajudas
         if (resp.toUpperCase(Locale.ROOT).equals("P")) {
+            //se poderes forem iguais a 0 não deve fazer nada
             if (poderes.size() == 0) {
                 System.out.println("Você não tem poderes, teremos que seguir sem utilizar ajuda.");
                 return imprimirQuestao(respostas, id);
             }
-            int ajudaGasta =  imprimePoderes();
-            System.out.println(ajudas.get(ajudaGasta));
+            //Poderes/ajudas
+            int ajudaGasta = imprimePoderes();
+            //imprime poder selecionado
+            System.out.println(ajudas.get(id-1));
+            //remove o poder selecionado
             poderes.remove(ajudaGasta);
             return imprimirQuestao(respostas, id);
         }
+
         //verifica se a resposta dada é válida ao conjunto de respostas validas
         else if (listaRespostas.indexOf(resp) == -1) {
             System.out.println("Esta resposta é inválida, tente apenas respostas validas.\nTente novamente.\n\n");
@@ -607,19 +618,24 @@ public class Main {
         return respostaCerta.toUpperCase(Locale.ROOT).equals(resp.toUpperCase(Locale.ROOT));
     }
 
+    //imprime os poderes possiveis do jogador
     private static int imprimePoderes() {
         Scanner scan = new Scanner(System.in);
-
+        //faz um laço na arrai para imprimir todos os poderes possiveis
         for (int i = 0; i < poderes.size(); i++) {
+            //Character.toString((char) i + 97) = tabela ascii
             System.out.println(Character.toString((char) i + 97) + ") " + poderes.get(i));
         }
+
         System.out.print("Selecione qual poder deseja utilizar: ");
         String resp = scan.next();
-        //verifica se a resposta dada é válida ao conjunto de respostas validas
-        if (resp.toLowerCase(Locale.ROOT).toCharArray()[0] - 97 == -1) {
+        //verifica se a resposta dada é válida, não pode ser -1 nem maior do que a quantidade de poderes -1
+        if (resp.toLowerCase(Locale.ROOT).toCharArray()[0] - 97 < 0 ||
+                resp.toLowerCase(Locale.ROOT).toCharArray()[0] - 97 > poderes.size()-1) {
             System.out.println("Este poder não existe, tente novamente");
             return imprimePoderes();
         }
+        //retorna indice da resposta
         return resp.toLowerCase(Locale.ROOT).toCharArray()[0] - 97;
     }
 
