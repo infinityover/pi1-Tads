@@ -412,7 +412,7 @@ public class Main {
 
     //Imprime as instruções do jogo
     private static void instrucoes() {
-        System.out.println("O jogo se baseia no genero RPG de texto, será necessario colocar em uso o seu conhecimento de programação\npara responder as mais diversas perguntas sobre desenvolvimento, então2" +
+        System.out.println("O jogo se baseia no genero RPG de texto, será necessario colocar em uso o seu conhecimento de programação\npara responder as mais diversas perguntas sobre desenvolvimento, então" +
                 " se prepare aventureiro, vamos entrar de cabeça nesse mundo.\n\n");
         menu();
     }
@@ -594,9 +594,9 @@ public class Main {
                 System.out.println("Você não tem poderes, teremos que seguir sem utilizar ajuda.");
                 return imprimirQuestao(respostas, id);
             }
-            imprimePoderes();
-            System.out.println(ajudas.get(id - 1));
-            poderes.remove(id - 1);
+            int ajudaGasta =  imprimePoderes();
+            System.out.println(ajudas.get(ajudaGasta));
+            poderes.remove(ajudaGasta);
             return imprimirQuestao(respostas, id);
         }
         //verifica se a resposta dada é válida ao conjunto de respostas validas
