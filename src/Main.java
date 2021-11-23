@@ -106,14 +106,18 @@ public class Main {
     private static String desafio3 = "Você pede ajuda a Jefferson?";
 
     // Perguntas
-    private static String p1 = "Escolha a alternativa correta que descreve o conceito de IF e IF ELSE? \n"
+
+    private static String p1 = "PERGUNTA 1? \n";
+    private static String p2 = "PERGUNTA 2? \n";
+
+    private static String p3 = "Escolha a alternativa correta que descreve o conceito de IF e IF ELSE? \n"
             + "I)   A estrutura IF executa um comando sempre que a condição seja falsa\n"
             + "II)  A estrutura IF executa um comando quando a condicional seja verdadeira correta\n"
             + "III) Podemos afirmar que o IF ELSE executa o comando e depois faz a verificação\n"
             + "IV)  A estrutura IF ELSE executa um conjunto de comandos caso a condição IF seja falsa\n"
             + "V)   Podemos afirmar que IF ELSE é utilizado para o teste de múltiplos caso seria IF ELSE aninhado correta\n";
 
-    private static String p2 = ("" +
+    private static String p4 = ("" +
             "O código abaixo mostra a verificação de um processo seletivo de um aluno\n" +
             "Identifique os erros que está impedindo o programa executar corretamente.\n\n" +
             PURPLE + "elseif " + RESET + "(" + GREEN + "nota " + PURPLE + "== " + BLUE + "10" + RESET + ") {\n"
@@ -126,9 +130,9 @@ public class Main {
             + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome + " + YELLOW + "\"Infelizmente você não Passou no processo seletivo\"" + RESET + ");\n"
             + "}\n");
 
-    private static String p3 = "Escolha a opção que descreve como o break funciona quando é utilizado dentro de um laço de repetição aninhado.";
+    private static String p5 = "Escolha a opção que descreve como o break funciona quando é utilizado dentro de um laço de repetição aninhado.";
 
-    private static String p4 = "O laço de repetição abaixo está formando uma metade de uma pirâmide, sendo criada por linhas e colunas. Porém o código não está rodando, o porquê o laço de repetição for não está rodando?\n"
+    private static String p6 = "O laço de repetição abaixo está formando uma metade de uma pirâmide, sendo criada por linhas e colunas. Porém o código não está rodando, o porquê o laço de repetição for não está rodando?\n"
             + PURPLE + "for " + RESET + "(int" + GREEN + " linha " + PURPLE + "= " + BLUE + "0" + RESET + "; " + GREEN + "linha" + PURPLE + " < " + BLUE + "10" + RESET + "; " + GREEN + "linha " + PURPLE + "+" + GREEN + " linha" + RESET + "){\n" +
             PURPLE + "    for " + RESET + "(int" + GREEN + " coluna " + PURPLE + "= " + BLUE + "0" + RESET + "; " + GREEN + "coluna" + PURPLE + " <= " + BLUE + "10" + RESET + "; " + GREEN + "coluna" + PURPLE + "++" + RESET + "){\n" +
             "		" + PURPLE + "if " + RESET + "(" + GREEN + "coluna " + PURPLE + "> " + GREEN + "linha" + RESET + ")\n" +
@@ -137,10 +141,6 @@ public class Main {
             "	}\n" +
             "" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "print" + RESET + "();\n" +
             "}";
-
-
-    private static String p5 = "PERGUNTA 5? \n";
-    private static String p6 = "PERGUNTA 6? \n";
 
     private static String p7 = "Utilizamos o Switch Case quando nosso codigo tem muitos(as)? \n";
     
@@ -196,39 +196,40 @@ public class Main {
             "}" + RESET;
 
     // Respostas
-    private static ArrayList<String> r1 = new ArrayList<>(Arrays.asList("(I e II e VI) Estão corretas",
+
+    private static ArrayList<String> r1 = new ArrayList<>(Arrays.asList(
+            "",
+            "",
+            "",
+            "",
+            ""));
+
+    private static ArrayList<String> r2 = new ArrayList<>(Arrays.asList(
+            "",
+            "",
+            "",
+            "",
+            ""));
+
+    private static ArrayList<String> r3 = new ArrayList<>(Arrays.asList("(I e II e VI) Estão corretas",
             "(I e II e III) Estão corretas",
             "(II e V) Estão corretas (CERTA RESPOSTA)",
             "(IV e II) Estão corretas",
             "(I e IV e V) Estão corretas",
             "(I) Está correta"));
 
-    private static ArrayList<String> r2 = new ArrayList<>(
+    private static ArrayList<String> r4 = new ArrayList<>(
             Arrays.asList("A estrutura IF não serve para verificar condicional.",
                     "A estrutura é iniciada primeiro com IF e a condição é entre (). (CERTA RESPOSTA)",
                     "Tem que declarar uma variável dentro da condição para poder executar o código.",
                     "A estrutura não pode ter um IF dentro de outro IF.",
                     "A estrutura sempre terá um IF dentro de outro IF."));
 
-    private static ArrayList<String> r3 = new ArrayList<>(Arrays.asList(
+    private static ArrayList<String> r5 = new ArrayList<>(Arrays.asList(
             "Finaliza a execução do programa no momento em que é chamado.",
             "Para a execução de todos os laços de repetição aninhados que o contém e continua normalmente o programa.",
             "Para a execução do laço que contém o comando break e continua executando os laços mais externos.(CERTA RESPOSTA)",
             "Ele para todos os laços de repetição que tem dentro do programa."));
-
-    private static ArrayList<String> r4 = new ArrayList<>(Arrays.asList(
-            "A estrutura FOR não se deve ter outro FOR dentro.",
-            "O código não está rodando, pois o break deve ser fora do laço de repetição FOR.",
-            "A estrutura não executa, pois a expressão linha + linha está incorreta, para seu código executa se deve considerar: linha++ ou linha = linha + 1.(CERTA RESPOSTA)",
-            "O código não vai rodar, pois o IF dentro do for está sem o ELSE.",
-            "Nenhuma das alternativas, o código está certo."));
-
-    private static ArrayList<String> r5 = new ArrayList<>(Arrays.asList(
-            "A estrutura FOR não se deve ter outro FOR dentro.",
-            "O código não está rodando, pois o break deve ser fora do laço de repetição FOR.",
-            "A estrutura não executa, pois a expressão linha + linha está incorreta, para seu código executa se deve considerar: linha++ ou linha = linha + 1.(CERTA RESPOSTA)",
-            "O código não vai rodar, pois o IF dentro do for está sem o ELSE.",
-            "Nenhuma das alternativas, o código está certo."));
 
     private static ArrayList<String> r6 = new ArrayList<>(Arrays.asList(
             "A estrutura FOR não se deve ter outro FOR dentro.",
@@ -331,6 +332,19 @@ public class Main {
     private static String h131 = "- \"É isso mesmo (NOME), parabéns, você está aprendendo certinho\" - diz Pedro\n" +
             "- \"Esse é meu menino\", grita a sua mãe da sala";
 
+    private static String h14 = "Já na próxima aula.\n" +
+            "- \"Temos que seguir adiante nos aprendizados\" - diz Fabiano, professor de lógica de programação\n" +
+            "- \"Então hoje vamos falar sobre switch, a primeira pergunta é...\" - completa Fabiano";
+
+    private static String h151 = "- \"Isto mesmo, o (NOME), como vocês podem ver, já sabe sobre switch, vamos ver então se você aprendeu direitinho\" - diz Fabiano para toda a sala\n";
+
+    private static String h152 = "- \"Uhmmm, não é bem assim, mas vamos ver se você acerta essa...\" - diz Fabiano para toda a sala\n";
+
+    private static String h16 = "Está chegando o fim do semestre, e pra isso é necessário dar um gás a mais nos estudo, então nos responda...";
+
+    private static String h171 = "Então já que é o sabichão e sabia essa me responda...";
+
+
 
     //Função do jogo
     private static void jogar() {
@@ -379,12 +393,41 @@ public class Main {
             pergunta(5);
             historia(12);
             if (pergunta(6)) {
-                historia(13);
+                historia(131);
             }
-
-
-        } catch (InterruptedException e) {
+            historia(14);
+            if (pergunta(7)) {
+                historia(151);
+            }else {
+                historia(152);
+            }
+            pergunta(8);
+            historia(16);
+            if ( pergunta(9)) {
+                historia(171);
+            }
+            pergunta(10);
+            exibePontuacao();
+            } catch (InterruptedException e) {
             e.printStackTrace();
+        }
+    }
+    //Exibe a pontuação que o jogador conseguiu dentro do jogo.
+    private static void exibePontuacao() {
+        if(pontuacao == 0){
+            System.out.println("Você foi demitido do seu emprego, devido a um corte de gasto");
+        }else if(pontuacao >= 1 && pontuacao <= 4){
+            System.out.println("PARABÉNSSSSSS\n" +
+                    "Devido ao seu esforço de estudos você recebeu uma proposta de emprego na empresa concorrente, com o cargo de desenvolvedor júnior");
+        }else if(pontuacao >= 4 && pontuacao <= 6){
+            System.out.println("PARABÉNSSSSSS\n" +
+                    "Devido ao seu esforço de estudos você recebeu uma proposta de emprego na empresa concorrente, com o cargo de desenvolvedor pleno");
+        }else if(pontuacao >= 7 && pontuacao <= 9){
+            System.out.println("PARABÉNSSSSSS\n" +
+                    "Devido ao seu esforço de estudos você recebeu uma proposta de emprego na empresa em que trabalha, com o cargo de desenvolvedor sênior");
+        }else if(pontuacao == 10){
+            System.out.println("PARABÉNSSSSSS\n" +
+                    "Devido ao seu esforço de estudos você recebeu uma proposta de emprego na empresa concorrente, com o cargo de especialista técnico");
         }
     }
 
@@ -476,7 +519,7 @@ public class Main {
                 imprimir(geraHistoria(h92), tempo);
                 break;
             case 10:
-                imprimir(geraHistoria(h1), tempo);
+                imprimir(geraHistoria(h10), tempo);
                 break;
             case 11:
                 imprimir(geraHistoria(h11), tempo);
@@ -487,7 +530,21 @@ public class Main {
             case 131:
                 imprimir(geraHistoria(h131), tempo);
                 break;
-
+            case 14:
+                imprimir(geraHistoria(h14), tempo);
+                break;
+            case 151:
+                imprimir(geraHistoria(h151), tempo);
+                break;
+            case 152:
+                imprimir(geraHistoria(h152), tempo);
+                break;
+            case 16:
+                imprimir(geraHistoria(h16), tempo);
+                break;
+            case 171:
+                imprimir(geraHistoria(h171), tempo);
+                break;
         }
     }
 
