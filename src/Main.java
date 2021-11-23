@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 public class Main {
     private static long tempo = 1l;
     private static int pontuacao = 0;
-    private static String nome = "";
+    public static String nome = "";
 
 
     private static ArrayList<String> erradas = new ArrayList<>(Arrays.asList(
@@ -16,7 +16,7 @@ public class Main {
             "Está..... Incorreta, perdeu tudo o drama do aluno que se ferrou!!! Mentira, vamos seguir os estudos!",
             "ERRRROOUUUU",
             "Errou feio, erro feio, errou rude"
-            ));
+    ));
 
     private static ArrayList<String> menuList = new ArrayList<>(Arrays.asList(
             "Jogar",
@@ -28,75 +28,11 @@ public class Main {
     private static final String RESET = "\033[0m";  // Text Reset
 
     // Regular Colors
-    private static final String BLACK = "\033[0;30m";   // BLACK
-    private static final String RED = "\033[0;31m";     // RED
     private static final String GREEN = "\033[0;32m";   // GREEN
     private static final String YELLOW = "\033[0;33m";  // YELLOW
     private static final String BLUE = "\033[0;34m";    // BLUE
     private static final String PURPLE = "\033[0;35m";  // PURPLE
-    private static final String CYAN = "\033[0;36m";    // CYAN
     private static final String WHITE = "\033[0;37m";   // WHITE
-
-    // Bold
-    private static final String BLACK_BOLD = "\033[1;30m";  // BLACK
-    private static final String RED_BOLD = "\033[1;31m";    // RED
-    private static final String GREEN_BOLD = "\033[1;32m";  // GREEN
-    private static final String YELLOW_BOLD = "\033[1;33m"; // YELLOW
-    private static final String BLUE_BOLD = "\033[1;34m";   // BLUE
-    private static final String PURPLE_BOLD = "\033[1;35m"; // PURPLE
-    private static final String CYAN_BOLD = "\033[1;36m";   // CYAN
-    private static final String WHITE_BOLD = "\033[1;37m";  // WHITE
-
-    // Underline
-    private static final String BLACK_UNDERLINED = "\033[4;30m";  // BLACK
-    private static final String RED_UNDERLINED = "\033[4;31m";    // RED
-    private static final String GREEN_UNDERLINED = "\033[4;32m";  // GREEN
-    private static final String YELLOW_UNDERLINED = "\033[4;33m"; // YELLOW
-    private static final String BLUE_UNDERLINED = "\033[4;34m";   // BLUE
-    private static final String PURPLE_UNDERLINED = "\033[4;35m"; // PURPLE
-    private static final String CYAN_UNDERLINED = "\033[4;36m";   // CYAN
-    private static final String WHITE_UNDERLINED = "\033[4;37m";  // WHITE
-
-    // Background
-    private static final String BLACK_BACKGROUND = "\033[40m";  // BLACK
-    private static final String RED_BACKGROUND = "\033[41m";    // RED
-    private static final String GREEN_BACKGROUND = "\033[42m";  // GREEN
-    private static final String YELLOW_BACKGROUND = "\033[43m"; // YELLOW
-    private static final String BLUE_BACKGROUND = "\033[44m";   // BLUE
-    private static final String PURPLE_BACKGROUND = "\033[45m"; // PURPLE
-    private static final String CYAN_BACKGROUND = "\033[46m";   // CYAN
-    private static final String WHITE_BACKGROUND = "\033[47m";  // WHITE
-
-    // High Intensity
-    private static final String BLACK_BRIGHT = "\033[0;90m";  // BLACK
-    private static final String RED_BRIGHT = "\033[0;91m";    // RED
-    private static final String GREEN_BRIGHT = "\033[0;92m";  // GREEN
-    private static final String YELLOW_BRIGHT = "\033[0;93m"; // YELLOW
-    private static final String BLUE_BRIGHT = "\033[0;94m";   // BLUE
-    private static final String PURPLE_BRIGHT = "\033[0;95m"; // PURPLE
-    private static final String CYAN_BRIGHT = "\033[0;96m";   // CYAN
-    private static final String WHITE_BRIGHT = "\033[0;97m";  // WHITE
-
-    // Bold High Intensity
-    private static final String BLACK_BOLD_BRIGHT = "\033[1;90m"; // BLACK
-    private static final String RED_BOLD_BRIGHT = "\033[1;91m";   // RED
-    private static final String GREEN_BOLD_BRIGHT = "\033[1;92m"; // GREEN
-    private static final String YELLOW_BOLD_BRIGHT = "\033[1;93m";// YELLOW
-    private static final String BLUE_BOLD_BRIGHT = "\033[1;94m";  // BLUE
-    private static final String PURPLE_BOLD_BRIGHT = "\033[1;95m";// PURPLE
-    private static final String CYAN_BOLD_BRIGHT = "\033[1;96m";  // CYAN
-    private static final String WHITE_BOLD_BRIGHT = "\033[1;97m"; // WHITE
-
-    // High Intensity backgrounds
-    private static final String BLACK_BACKGROUND_BRIGHT = "\033[0;100m";// BLACK
-    private static final String RED_BACKGROUND_BRIGHT = "\033[0;101m";// RED
-    private static final String GREEN_BACKGROUND_BRIGHT = "\033[0;102m";// GREEN
-    private static final String YELLOW_BACKGROUND_BRIGHT = "\033[0;103m";// YELLOW
-    private static final String BLUE_BACKGROUND_BRIGHT = "\033[0;104m";// BLUE
-    private static final String PURPLE_BACKGROUND_BRIGHT = "\033[0;105m"; // PURPLE
-    private static final String CYAN_BACKGROUND_BRIGHT = "\033[0;106m";  // CYAN
-    private static final String WHITE_BACKGROUND_BRIGHT = "\033[0;107m";   // WHITE
-
 
     private static ArrayList<String> poderes = new ArrayList<>(
             Arrays.asList());
@@ -143,47 +79,47 @@ public class Main {
             "}";
 
     private static String p7 = "Utilizamos o Switch Case quando nosso codigo tem muitos(as)? \n";
-    
-    private static String p8 = PURPLE +"import "+ GREEN + "java.util.Scanner;\r\n"
-    		+ "\r\n"
-    		+ PURPLE+"public class " + GREEN +"jogo {\r\n"
-    		+ "\r\n"
-    		+ PURPLE + "	public static"+" void"+ GREEN + " main"+"(String[]"+ GREEN +" args" +") {\r\n"
-    		+  "    int "+ GREEN +"opcoes"+ PURPLE +" ="+ BLUE +" 0" +";\r\n"
-    		+ "\r\n"
-    		+ GREEN+"		System.out.println"+WHITE+"(\r\n"
-    		+ "				"+ YELLOW +"Você deverá fazer uma apresentação para o final do semestre, onde enfretará o impiedoso OEKAT\\n\"\r\n"
-    		+ "						+ \"E terá que escolher uma das opções para se sair bem na apresentação, porém, toda escolha terá uma consequencia\\n\"\r\n"
-    		+ "						+ \"1- Você faz um codigo bem estruturado\\n\"\r\n"
-    		+ "						+ \"2- A história do seu jogo é a melhor e mais criativa\\n\"\r\n"
-    		+ "						+ \"3- Você e seu grupo fizeram varias reuniões e o trabalho está de acordo com o que foi pedido \"\r\n"
-    		+ "						+ \"4- Os testes de código do seu grupo deram todos certos\"\r\n"
-    		+ "						+ \"5- Você sabe tudo sobre o código e caso alguém caia durante a apresentação, você saberá explicar\""+WHITE+");\r\n"
-    		+ "\r\n"
-    		+PURPLE+ "		switch"+WHITE+" ("+ GREEN +"opcoes"+WHITE+") {\r\n"
-    		+ PURPLE +"		case "+ BLUE +"1"+":\r\n"
-    		+ GREEN +"			System.out.println"+WHITE+"("+YELLOW+"\"Mas não faz os testes\""+PURPLE+ "+" + "Assim o impiedoso OEKAT tira 5 pontos do seu grupo\""+");\r\n"
-    		+ PURPLE +"			break"+WHITE+";\r\n"
-    		+ "\r\n"
-    		+PURPLE+ "		case"+ BLUE + " 2:\r\n"
-    		+GREEN + "			System.out.println"+WHITE+"("+YELLOW+"\"Mas no meio da apresentação seu código da uma crashada sem querer\"\r\n"
-    		+ "					+ \"Você até consegue disfarçar, mas o impiedoso OEKAT tira 2 pontos do seu grupo\""+WHITE+");\r\n"
-    		+ PURPLE + "			break"+WHITE+";\r\n"
-    		+ "\r\n"
-    		+PURPLE + "		case"+ BLUE +" 3:\r\n"
-    		+ GREEN + "			System.out.println"+WHITE+"("+YELLOW + "\"Mas no dia da apresentação 3 membros do seu grupo ficam presos no transito\"\r\n"
-    		+ "					+ \"pois está tendo um protesto de crianças que não ganharam um playstation quando ligaram no bom dia e cia\\n\"\r\n"
-    		+ "					+ \"Seu grupo atrasa um pouco a aula e o impiedoso OEKAT tira 1 ponto do seu grupo\""+WHITE+ ");\r\n"
-    		+PURPLE + "			break;\r\n"
-    		+ "\r\n"
-    		+ PURPLE + "		case"+BLUE+ "4:\r\n"
-    		+ GREEN +"			System.out.println"+WHITE+"("+YELLOW+"\"Mas no dia da apresentação você cai e como a nota é individual\"\r\n"
-    		+ "					+ \"O impiedoso OEKAT desconta 3 pontos seu, em compensação, seu grupo se deu bem \""+WHITE+");\r\n"
-    		+PURPLE +  "			break;\r\n"+WHITE
-    		+ "		}\r\n"
-    		+ "	}\r\n"
-    		+ "}\r\n\n"
-    		+ "De acordo com o código acima, podemos afirmar que : \n" +
+
+    private static String p8 = PURPLE + "import " + GREEN + "java.util.Scanner;\r\n"
+            + "\r\n"
+            + PURPLE + "public class " + GREEN + "jogo {\r\n"
+            + "\r\n"
+            + PURPLE + "	public static" + " void" + GREEN + " main" + "(String[]" + GREEN + " args" + ") {\r\n"
+            + "    int " + GREEN + "opcoes" + PURPLE + " =" + BLUE + " 0" + ";\r\n"
+            + "\r\n"
+            + GREEN + "		System.out.println" + WHITE + "(\r\n"
+            + "				" + YELLOW + "Você deverá fazer uma apresentação para o final do semestre, onde enfretará o impiedoso OEKAT\\n\"\r\n"
+            + "						+ \"E terá que escolher uma das opções para se sair bem na apresentação, porém, toda escolha terá uma consequencia\\n\"\r\n"
+            + "						+ \"1- Você faz um codigo bem estruturado\\n\"\r\n"
+            + "						+ \"2- A história do seu jogo é a melhor e mais criativa\\n\"\r\n"
+            + "						+ \"3- Você e seu grupo fizeram varias reuniões e o trabalho está de acordo com o que foi pedido \"\r\n"
+            + "						+ \"4- Os testes de código do seu grupo deram todos certos\"\r\n"
+            + "						+ \"5- Você sabe tudo sobre o código e caso alguém caia durante a apresentação, você saberá explicar\"" + WHITE + ");\r\n"
+            + "\r\n"
+            + PURPLE + "		switch" + WHITE + " (" + GREEN + "opcoes" + WHITE + ") {\r\n"
+            + PURPLE + "		case " + BLUE + "1" + ":\r\n"
+            + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas não faz os testes\"" + PURPLE + "+" + "Assim o impiedoso OEKAT tira 5 pontos do seu grupo\"" + ");\r\n"
+            + PURPLE + "			break" + WHITE + ";\r\n"
+            + "\r\n"
+            + PURPLE + "		case" + BLUE + " 2:\r\n"
+            + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas no meio da apresentação seu código da uma crashada sem querer\"\r\n"
+            + "					+ \"Você até consegue disfarçar, mas o impiedoso OEKAT tira 2 pontos do seu grupo\"" + WHITE + ");\r\n"
+            + PURPLE + "			break" + WHITE + ";\r\n"
+            + "\r\n"
+            + PURPLE + "		case" + BLUE + " 3:\r\n"
+            + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas no dia da apresentação 3 membros do seu grupo ficam presos no transito\"\r\n"
+            + "					+ \"pois está tendo um protesto de crianças que não ganharam um playstation quando ligaram no bom dia e cia\\n\"\r\n"
+            + "					+ \"Seu grupo atrasa um pouco a aula e o impiedoso OEKAT tira 1 ponto do seu grupo\"" + WHITE + ");\r\n"
+            + PURPLE + "			break;\r\n"
+            + "\r\n"
+            + PURPLE + "		case" + BLUE + "4:\r\n"
+            + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas no dia da apresentação você cai e como a nota é individual\"\r\n"
+            + "					+ \"O impiedoso OEKAT desconta 3 pontos seu, em compensação, seu grupo se deu bem \"" + WHITE + ");\r\n"
+            + PURPLE + "			break;\r\n" + WHITE
+            + "		}\r\n"
+            + "	}\r\n"
+            + "}\r\n\n"
+            + "De acordo com o código acima, podemos afirmar que : \n" +
             "I) Tem case a mais \n" +
             "II) O código está sem a entrada de dados \n" +
             "III) A variável está errada \n" +
@@ -237,16 +173,16 @@ public class Main {
             "A estrutura não executa, pois a expressão linha + linha está incorreta, para seu código executa se deve considerar: linha++ ou linha = linha + 1.(CERTA RESPOSTA)",
             "O código não vai rodar, pois o IF dentro do for está sem o ELSE.",
             "Nenhuma das alternativas, o código está certo."));
-    
+
     private static ArrayList<String> r7 = new ArrayList<>(Arrays.asList(
-    		"Variáveis", "Bibliotecas importadas", "Laços de repetição", "If else (CERTA RESPOSTA)", "Sysout.out.println"));
+            "Variáveis", "Bibliotecas importadas", "Laços de repetição", "If else (CERTA RESPOSTA)", "Sysout.out.println"));
 
     private static ArrayList<String> r8 = new ArrayList<>(Arrays.asList("I e a II estão corretas",
             "I e IV estão corretas",
             "II e IV estão corretas(CERTA RESPOSTA)",
             "II, III e IV estão corretas",
             "Todas as afirmativas estão corretas"));
-    		
+
 
     private static ArrayList<String> r9 = new ArrayList<>(Arrays.asList(
             "São partes do código que possuem objetivos específicos, que podem ser chamadas em qualquer parte daquele código, e podem retornar algum valor.(CERTA RESPOSTA)",
@@ -345,7 +281,6 @@ public class Main {
     private static String h171 = "Então já que é o sabichão e sabia essa me responda...";
 
 
-
     //Função do jogo
     private static void jogar() {
         try {
@@ -398,37 +333,40 @@ public class Main {
             historia(14);
             if (pergunta(7)) {
                 historia(151);
-            }else {
+            } else {
                 historia(152);
             }
             pergunta(8);
             historia(16);
-            if ( pergunta(9)) {
+            if (pergunta(9)) {
                 historia(171);
             }
             pergunta(10);
             exibePontuacao();
-            } catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
+
     //Exibe a pontuação que o jogador conseguiu dentro do jogo.
-    private static void exibePontuacao() {
-        if(pontuacao == 0){
+    //Este retorno só serve para fazer teste
+    public static int exibePontuacao() {
+        if (pontuacao == 0) {
             System.out.println("Você foi demitido do seu emprego, devido a um corte de gasto");
-        }else if(pontuacao >= 1 && pontuacao <= 4){
+        } else if (pontuacao >= 1 && pontuacao <= 4) {
             System.out.println("PARABÉNSSSSSS\n" +
                     "Devido ao seu esforço de estudos você recebeu uma proposta de emprego na empresa concorrente, com o cargo de desenvolvedor júnior");
-        }else if(pontuacao >= 4 && pontuacao <= 6){
+        } else if (pontuacao >= 4 && pontuacao <= 6) {
             System.out.println("PARABÉNSSSSSS\n" +
                     "Devido ao seu esforço de estudos você recebeu uma proposta de emprego na empresa concorrente, com o cargo de desenvolvedor pleno");
-        }else if(pontuacao >= 7 && pontuacao <= 9){
+        } else if (pontuacao >= 7 && pontuacao <= 9) {
             System.out.println("PARABÉNSSSSSS\n" +
                     "Devido ao seu esforço de estudos você recebeu uma proposta de emprego na empresa em que trabalha, com o cargo de desenvolvedor sênior");
-        }else if(pontuacao == 10){
+        } else if (pontuacao == 10) {
             System.out.println("PARABÉNSSSSSS\n" +
                     "Devido ao seu esforço de estudos você recebeu uma proposta de emprego na empresa concorrente, com o cargo de especialista técnico");
         }
+        return pontuacao;
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -562,17 +500,17 @@ public class Main {
 
             case 3:
                 imprimir(p3, tempo);
-                return pontuar(imprimirQuestao(r3,id));
+                return pontuar(imprimirQuestao(r3, id));
 
             case 4:
                 imprimir(p4, tempo);
                 return pontuar(imprimirQuestao(r4, id));
             case 5:
                 imprimir(p5, tempo);
-                return pontuar(imprimirQuestao(r5,id));
+                return pontuar(imprimirQuestao(r5, id));
             case 6:
                 imprimir(p6, tempo);
-                return pontuar(imprimirQuestao(r6,id));
+                return pontuar(imprimirQuestao(r6, id));
 
             case 7:
                 imprimir(p7, tempo);
@@ -603,15 +541,17 @@ public class Main {
     }
 
     //Recebe o texto a ser impresso e em qual velocidade devem ser digitadas as letras
-    public static void imprimir(String texto, long tempo) throws InterruptedException {
+    //retorno somente para teste
+    public static boolean imprimir(String texto, long tempo) throws InterruptedException {
         for (Character per : texto.toCharArray()) {
             System.out.print(per);
             TimeUnit.MILLISECONDS.sleep(tempo);
         }
         System.out.println();
+        return true;
     }
 
-    public static void imprimirRespostaErrada(ArrayList<String> possiblidades, long tempo) throws InterruptedException {
+    public static boolean imprimirRespostaErrada(ArrayList<String> possiblidades, long tempo) throws InterruptedException {
         Random rand = new Random();
         String texto = possiblidades.get(rand.nextInt(possiblidades.size()));
 
@@ -621,6 +561,7 @@ public class Main {
         }
 
         System.out.println();
+        return true;
     }
 
 
