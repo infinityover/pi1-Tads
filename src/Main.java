@@ -3,7 +3,7 @@ import java.lang.reflect.Array;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-import static java.awt.Color.RED;
+
 
 public class Main {
     private static long tempo = 1l;
