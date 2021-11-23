@@ -3,6 +3,8 @@ import java.lang.reflect.Array;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
+import static java.awt.Color.RED;
+
 public class Main {
     private static long tempo = 1l;
     private static int pontuacao = 0;
@@ -232,14 +234,14 @@ public class Main {
             "-\"Assim que é bom, animado igual um leão faminto na savana africana, ahahahah, enfim, depois de uma semana,\n" +
             " acho que deu tempo de tu estudar algumas coisas, vamos a nossa primeira pergunta, para eu poder saber se você aprendeu algo nesse tempo ou ainda nada.\"\n";
 
-    private static String h51 = "-\"Eita, então você é o bixão mesmo ein. Parece que estudou pelo menos um pouco, vamos ver se você aprendeu mesmo sobre esse tema\n";
+    private static String h51 = "-\"Eita, então você é o bixão mesmo ein. Parece que estudou pelo menos um pouco, vamos ver se você aprendeu mesmo sobre esse tema\"\n";
 
-    private static String h52 = "-\"É... Como deve ter percebido até o narrador está tirando uma com a sua cara, e você vai fazer o que com isso? \n" +
+    private static String h52 = "-\"É... Como deve ter percebido até o narrador está tirando uma com a sua cara, e você vai fazer o que com isso?\" \n" +
             "Euuuuu particularmente não deixava...\" - diz Jefferson \n" +
             "\"E eu digo mais... Mais\" - diz o narrador" +
             "\"Bom deixando a zueira de lado, vamos continuar aqui com os nossos desafios\" - dispara Jefferson";
 
-    private static String h61 = "-\"Você estou bem então... Vamos vou te passar uma recomendação de livro pra tu dar uma olhada,\n mas mesmo assim eu te aconselho a se inscrever em um curso para poder se aprimorar nisso.\n";
+    private static String h61 = "-\"Você estou bem então... Vamos vou te passar uma recomendação de livro pra tu dar uma olhada,\n mas mesmo assim eu te aconselho a se inscrever em um curso para poder se aprimorar nisso.\"\n";
 
     private static String h62 = "-\"Pois é, o narrador, parece estar te zuando mesmo. Enfim, parece que você até estudou," +
             "\n mas não o tanto que deveria, vou te recomendar estudar mais, e tambem dar uma olhada em algumas referencias de livros por aí \"\n";
@@ -296,7 +298,7 @@ public class Main {
             }
 
             historia(1);
-            if (pergunta(8)) {
+            if (pergunta(1)) {
                 historia(51);
             } else {
                 historia(52);
@@ -377,6 +379,11 @@ public class Main {
     public static void menu() {
 
         Scanner scan = new Scanner(System.in);
+
+        System.out.println("*------------------------------------------------*");
+        System.out.println("|                PROGRAMANDO A VIDA              |");
+        System.out.println("*------------------------------------------------*");
+
         for (int i = 0; i < menuList.size(); i++) {
             System.out.println(i + 1 + ") " + menuList.get(i));
         }
