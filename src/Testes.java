@@ -23,7 +23,7 @@ public class Testes {
             System.out.println("Teste imprimir falhou");
         }
 
-        if(Main.imprimirRespostaErrada(new ArrayList<>(Arrays.asList("A estrutura FOR não se deve ter outro FOR dentro.")), 10l)){
+        if(Main.imprimirRespostaErrada(new String[]{"A estrutura FOR não se deve ter outro FOR dentro."}, 10l)){
             System.out.println("Teste imprimirRespostaErrada passou");
         }else{
 

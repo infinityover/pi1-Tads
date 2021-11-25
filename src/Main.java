@@ -11,14 +11,13 @@ public class Main {
     public static String nome = "";
 
 
-    private static ArrayList<String> erradas = new ArrayList<>(Arrays.asList(
+    private static String[] erradas = {
             "Uhmmm, que pena, essa resposta não era a correta, mas vamos seguir mesmo assim.",
             "Olha... Esta resposta não é a correta, mas não tem problemas, você pode tentar acerta-la em outra vida! MUAHAHAHAHA",
             "Parece que você errou e sua vida acaba aqui MUAHAHAHAHA... Brincadeirinha, vamos seguir.",
             "Está..... Incorreta, perdeu tudo o drama do aluno que se ferrou!!! Mentira, vamos seguir os estudos!",
             "ERRRROOUUUU",
-            "Errou feio, erro feio, errou rude"
-    ));
+            "Errou feio, erro feio, errou rude"};
 
     private static ArrayList<String> menuList = new ArrayList<>(Arrays.asList(
             "Jogar",
@@ -567,11 +566,11 @@ public class Main {
     }
 
     //recebe uma array de possibilidades
-    public static boolean imprimirRespostaErrada(ArrayList<String> possiblidades, long tempo) throws InterruptedException {
+    public static boolean imprimirRespostaErrada(String[] possiblidades, long tempo) throws InterruptedException {
         Random rand = new Random();
         //pega uma resposta aleatoria da array de respostas possiveis, e imprime ela
         //utilizando metodo de impressão digitada
-        String texto = possiblidades.get(rand.nextInt(possiblidades.size()));
+        String texto = possiblidades[rand.nextInt(possiblidades.length)];
 
         imprimir(texto,tempo);
         System.out.println();
