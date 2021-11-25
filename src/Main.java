@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 
 public class Main {
-    private static long tempo = 1l;
+    private static long tempo = 5l;
     private static int pontuacao = 0;
     public static String nome = "";
 
@@ -35,7 +35,7 @@ public class Main {
     private static final String BLUE = "\033[0;34m";    // BLUE
     private static final String PURPLE = "\033[0;35m";  // PURPLE
     private static final String WHITE = "\033[0;37m";   // WHITE
-
+    private static final String NEGRITO = "\033[0;1m";  //NEGRITO
     private static ArrayList<String> poderes = new ArrayList<>();
 
     private static String desafio1 = "Você assiste as aulas como o Jefferson sugeriu?";
@@ -44,10 +44,10 @@ public class Main {
 
     // Perguntas
 
-    private static String p1 = "PERGUNTA 1? \n";
-    private static String p2 = "PERGUNTA 2? \n";
+    private static String p1 = NEGRITO + "teste 1? \n" + RESET;
+    private static String p2 = NEGRITO + "PERGUNTA 2? \n" + RESET;
 
-    private static String p3 = "Escolha a alternativa correta que descreve o conceito de IF e IF ELSE? \n"
+    private static String p3 = NEGRITO + "Escolha a alternativa correta que descreve o conceito de IF e IF ELSE? \n" + RESET
             + "I)   A estrutura IF executa um comando sempre que a condição seja falsa\n"
             + "II)  A estrutura IF executa um comando quando a condicional é verdadeira \n"
             + "III) Podemos afirmar que o IF ELSE executa o comando e depois faz a verificação\n"
@@ -55,8 +55,8 @@ public class Main {
             + "V)   Podemos afirmar que IF ELSE é utilizado para o teste de múltiplos caso seria IF ELSE aninhado\n";
 
     private static String p4 = ("" +
-            "O código abaixo mostra a verificação de um processo seletivo de um aluno\n" +
-            "Identifique os erros que está impedindo o programa executar corretamente.\n\n" +
+            NEGRITO + "O código abaixo mostra a verificação de um processo seletivo de um aluno\n" +RESET+
+            "Identifique os erros que está impedindo o programa executar corretamente.\n\n" + RESET +
             PURPLE + "elseif " + RESET + "(" + GREEN + "nota " + PURPLE + "== " + BLUE + "10" + RESET + ") {\n"
             + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome " + PURPLE + "+ " + YELLOW + "\" Parabéns você ganhou uma bolsa de estudos\"" + RESET + ");\n"
             + "} " + PURPLE + "else if " + RESET + "(" + GREEN + "nota " + PURPLE + "> " + BLUE + "7" + PURPLE + " && " + GREEN + "nota " + PURPLE + "< " + BLUE + "10" + RESET + ") {\n"
@@ -67,9 +67,9 @@ public class Main {
             + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome + " + YELLOW + "\"Infelizmente você não Passou no processo seletivo\"" + RESET + ");\n"
             + "}\n\n");
 
-    private static String p5 = "\nEscolha a opção que descreve como o break funciona quando é utilizado dentro de um laço de repetição aninhado.";
+    private static String p5 = NEGRITO + "\nEscolha a opção que descreve como o break funciona quando é utilizado dentro de um laço de repetição aninhado." + RESET;
 
-    private static String p6 = "O laço de repetição abaixo está formando uma metade de uma pirâmide, sendo criada por linhas e colunas. Porém o código não está rodando, o porquê o laço de repetição for não está rodando?\n"
+    private static String p6 = NEGRITO + "O laço de repetição abaixo está formando uma metade de uma pirâmide, sendo criada por linhas e colunas. Porém o código não está rodando, o porquê o laço de repetição for não está rodando?\n" + RESET
             + PURPLE + "for " + RESET + "(int" + GREEN + " linha " + PURPLE + "= " + BLUE + "0" + RESET + "; " + GREEN + "linha" + PURPLE + " < " + BLUE + "10" + RESET + "; " + GREEN + "linha " + PURPLE + "+" + GREEN + " linha" + RESET + "){\n" +
             PURPLE + "    for " + RESET + "(int" + GREEN + " coluna " + PURPLE + "= " + BLUE + "0" + RESET + "; " + GREEN + "coluna" + PURPLE + " <= " + BLUE + "10" + RESET + "; " + GREEN + "coluna" + PURPLE + "++" + RESET + "){\n" +
             "		" + PURPLE + "if " + RESET + "(" + GREEN + "coluna " + PURPLE + "> " + GREEN + "linha" + RESET + ")\n" +
@@ -79,7 +79,7 @@ public class Main {
             "" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "print" + RESET + "();\n" +
             "}";
 
-    private static String p7 = "Utilizamos o Switch Case quando nosso codigo tem muitos(as)? \n";
+    private static String p7 = NEGRITO + "Utilizamos o Switch Case quando nosso codigo tem muitos(as)? \n" + RESET;
 
     private static String p8 = PURPLE + "import " + GREEN + "java.util.Scanner;\r\n"
             + "\r\n"
@@ -121,15 +121,15 @@ public class Main {
             + "		}\r\n"
             + "	}\r\n"
             + "}\r\n\n"
-            + "De acordo com o código acima, podemos afirmar que : \n" +
+            + NEGRITO + "De acordo com o código acima, podemos afirmar que : \n" + RESET +
             "I) Tem case a mais \n" +
             "II) O código está sem a entrada de dados \n" +
             "III) A variável está errada \n" +
             "IV) Tem case a menos \n";
 
-    private static String p9 = "No que tange funções podemos descrevê-las como";
+    private static String p9 =NEGRITO + "No que tange funções podemos descrevê-las como" + RESET;
 
-    private static String p10 = "Qual o erro do código abaixo?\n" + PURPLE + " static void " + GREEN + "soma" + YELLOW + "(" + PURPLE + "int" + RESET + " a, " + PURPLE + "int" + RESET + " b" + YELLOW + ")" + WHITE + "{\n" +
+    private static String p10 = NEGRITO + "Qual o erro do código abaixo?\n" + RESET + PURPLE + " static void " + GREEN + "soma" + YELLOW + "(" + PURPLE + "int" + RESET + " a, " + PURPLE + "int" + RESET + " b" + YELLOW + ")" + WHITE + "{\n" +
             "   " + PURPLE + "return " + WHITE + "a+b;\n" +
             "}" + RESET;
 
@@ -219,6 +219,7 @@ public class Main {
             "Como sempre está infeliz com o seu chefe pegando no seu pé dia sim, dia também.\nLogo que chega pela manhã no escritório encontra Renata, então ela diz:" +
             "Bom dia ____________";
 
+
     private static String h2 = "- \"Bom dia (NOME), pronto pra mais um dia do Claudio (Seu chefe), pegando no seu pé? rs\" diz Renata. \n" +
             "- \"Ficou sabendo de ontem?!? Ele simplesmente implicou comigo por que eu cheguei 5 minutos atrasado do almoço, assim não tá dando,\n vou tentar sair área ou procurar um novo emprego, fiquei sabendo que TI é uma área legal, o pessoal parace ser maluco, mas gente boa\" \n" +
             "- \"Pois é menino, esse Claudio ta passando dos limites... Enfim acho que se quer isso, deveria tentar mesmo, eu conheço um rapaz da área de TI, vou te passar o contato dele, para vocês trocarem figurinhas.\"";
@@ -297,7 +298,7 @@ public class Main {
                 System.out.println("Você liberou o poder de perguntar para o Takeo, isto poderá ser util em momentos de dificuldades");
             }
 
-            historia(1);
+            historia(4);
             if (pergunta(1)) {
                 historia(51);
             } else {
@@ -412,14 +413,14 @@ public class Main {
 
     //Imprime créditos
     private static void creditos() {
-        System.out.println("Este jogo foi desenvolvido com esméro por:\n" +
-                "Paulo Belfi\n\n");
+        System.out.println("Este jogo foi desenvolvido com esméro por:\n\n" +
+                "Alexandre Alves Silva\nErick Santos Rocha\nKauê Campos de Lima\nPaulo Belfi\nValdiran Jesus Cruz\n");
         menu();
     }
 
     //Imprime as instruções do jogo
     private static void instrucoes() {
-        System.out.println("O jogo se baseia no genero RPG de texto, será necessario colocar em uso o seu conhecimento de programação\npara responder as mais diversas perguntas sobre desenvolvimento, então" +
+        System.out.println("\nO jogo se baseia no genero RPG de texto, será necessario colocar em uso o seu conhecimento de programação\npara responder as mais diversas perguntas sobre desenvolvimento, então" +
                 " se prepare aventureiro, vamos entrar de cabeça nesse mundo.\n\n");
         menu();
     }
