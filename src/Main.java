@@ -12,18 +12,18 @@ public class Main {
 
 
     private static ArrayList<String> erradas = new ArrayList<>(Arrays.asList(
-            "Uhmmm, que pena, essa resposta n„o era a correta, mas vamos seguir mesmo assim.",
-            "Olha... Esta resposta n„o È a correta, mas n„o tem problemas, vocÍ pode tentar acerta-la em outra vida! MUAHAHAHAHA",
-            "Parece que vocÍ errou e sua vida acaba aqui MUAHAHAHAHA... Brincadeirinha, vamos seguir.",
-            "Est·..... Incorreta, perdeu tudo o drama do aluno que se ferrou!!! Mentira, vamos seguir os estudos!",
+            "Uhmmm, que pena, essa resposta n√£o era a correta, mas vamos seguir mesmo assim.",
+            "Olha... Esta resposta n√£o √© a correta, mas n√£o tem problemas, voc√™ pode tentar acerta-la em outra vida! MUAHAHAHAHA",
+            "Parece que voc√™ errou e sua vida acaba aqui MUAHAHAHAHA... Brincadeirinha, vamos seguir.",
+            "Est√°..... Incorreta, perdeu tudo o drama do aluno que se ferrou!!! Mentira, vamos seguir os estudos!",
             "ERRRROOUUUU",
             "Errou feio, erro feio, errou rude"
     ));
 
     private static ArrayList<String> menuList = new ArrayList<>(Arrays.asList(
             "Jogar",
-            "InstruÁıes",
-            "CrÈditos",
+            "Instru√ß√µes",
+            "Cr√©ditos",
             "Sair"));
 
     // Reset
@@ -38,38 +38,44 @@ public class Main {
     private static final String NEGRITO = "\033[0;1m";  //NEGRITO
     private static ArrayList<String> poderes = new ArrayList<>();
 
-    private static String desafio1 = "VocÍ assiste as aulas como o Jefferson sugeriu?";
-    private static String desafio2 = "VocÍ lÍ o livro que Jefferson sugeriu?";
-    private static String desafio3 = "VocÍ pede ajuda a Jefferson?";
+    private static String desafio1 = "Voc√™ assiste as aulas como o Jefferson sugeriu?";
+    private static String desafio2 = "Voc√™ l√™ o livro que Jefferson sugeriu?";
+    private static String desafio3 = "Voc√™ pede ajuda a Jefferson?";
 
     // Perguntas
 
-    private static String p1 = NEGRITO + "teste 1? \n" + RESET;
-    private static String p2 = NEGRITO + "PERGUNTA 2? \n" + RESET;
+    private static String p1 = NEGRITO + "Assinale a alternativa CORRETA  da vari√°vel que se enquadra no grupo de vari√°veis de uma classe boolean? \n" + RESET;
+    private static String p2 = NEGRITO + "Neste c√≥digo abaixo qual tipo vari√°vel n√£o mostrar√° em tela o n√∫mero -134. \n" +
+            PURPLE+"public class"+GREEN+" PerguntasProjeto"+WHITE+"{\n" +
+            PURPLE+"  public static "+WHITE+"void "+GREEN+"main"+WHITE+"("+GREEN+"string"+WHITE+"[] "+GREEN+"args"+WHITE+"){\n" +
+            GREEN+"    questao2 "+PURPLE+"= -"+BLUE+"134;\n" +
+            GREEN+"    System"+WHITE+"."+GREEN+"out"+WHITE+"."+GREEN+"println"+WHITE+"("+GREEN+" teste"+WHITE+" );\n" +
+            "  }\n" +
+            "}" + RESET;
 
     private static String p3 = NEGRITO + "Escolha a alternativa correta que descreve o conceito de IF e IF ELSE? \n" + RESET
-            + "I)   A estrutura IF executa um comando sempre que a condiÁ„o seja falsa\n"
-            + "II)  A estrutura IF executa um comando quando a condicional È verdadeira \n"
-            + "III) Podemos afirmar que o IF ELSE executa o comando e depois faz a verificaÁ„o\n"
-            + "IV)  A estrutura IF ELSE executa um conjunto de comandos caso a condiÁ„o IF seja falsa\n"
-            + "V)   Podemos afirmar que IF ELSE È utilizado para o teste de m˙ltiplos caso seria IF ELSE aninhado\n";
+            + "I)   A estrutura IF executa um comando sempre que a condi√ß√£o seja falsa\n"
+            + "II)  A estrutura IF executa um comando quando a condicional √© verdadeira \n"
+            + "III) Podemos afirmar que o IF ELSE executa o comando e depois faz a verifica√ß√£o\n"
+            + "IV)  A estrutura IF ELSE executa um conjunto de comandos caso a condi√ß√£o IF seja falsa\n"
+            + "V)   Podemos afirmar que IF ELSE √© utilizado para o teste de m√∫ltiplos caso seria IF ELSE aninhado\n";
 
     private static String p4 = ("" +
-            NEGRITO + "O cÛdigo abaixo mostra a verificaÁ„o de um processo seletivo de um aluno\n" +RESET+
-            "Identifique os erros que est· impedindo o programa executar corretamente.\n\n" + RESET +
+            NEGRITO + "O c√≥digo abaixo mostra a verifica√ß√£o de um processo seletivo de um aluno\n" +RESET+
+            "Identifique os erros que est√° impedindo o programa executar corretamente.\n\n" + RESET +
             PURPLE + "elseif " + RESET + "(" + GREEN + "nota " + PURPLE + "== " + BLUE + "10" + RESET + ") {\n"
-            + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome " + PURPLE + "+ " + YELLOW + "\" ParabÈns vocÍ ganhou uma bolsa de estudos\"" + RESET + ");\n"
+            + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome " + PURPLE + "+ " + YELLOW + "\" Parab√©ns voc√™ ganhou uma bolsa de estudos\"" + RESET + ");\n"
             + "} " + PURPLE + "else if " + RESET + "(" + GREEN + "nota " + PURPLE + "> " + BLUE + "7" + PURPLE + " && " + GREEN + "nota " + PURPLE + "< " + BLUE + "10" + RESET + ") {\n"
-            + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome + " + YELLOW + "\"vocÍ ganhou 20% de desconto na mensalidade\"" + RESET + ");\n"
+            + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome + " + YELLOW + "\"voc√™ ganhou 20% de desconto na mensalidade\"" + RESET + ");\n"
             + "} " + PURPLE + "else if " + RESET + "(" + GREEN + "nota " + PURPLE + ">=" + BLUE + "05" + PURPLE + " && " + GREEN + "nota " + PURPLE + "< " + BLUE + "7" + RESET + ") {\n"
-            + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome + " + YELLOW + "\"vocÍ ganhou desconto de 10% na mensalidade\"" + RESET + ");\n"
+            + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome + " + YELLOW + "\"voc√™ ganhou desconto de 10% na mensalidade\"" + RESET + ");\n"
             + "} " + PURPLE + "else if " + RESET + "(" + GREEN + "nota " + PURPLE + "<=" + BLUE + "5" + PURPLE + " || " + GREEN + "nota " + PURPLE + "== " + BLUE + "0" + RESET + ") {\n"
-            + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome + " + YELLOW + "\"Infelizmente vocÍ n„o Passou no processo seletivo\"" + RESET + ");\n"
+            + "		" + GREEN + "System" + RESET + "." + GREEN + "out" + RESET + "." + GREEN + "println" + RESET + "(" + GREEN + "nome + " + YELLOW + "\"Infelizmente voc√™ n√£o Passou no processo seletivo\"" + RESET + ");\n"
             + "}\n\n");
 
-    private static String p5 = NEGRITO + "\nEscolha a opÁ„o que descreve como o break funciona quando È utilizado dentro de um laÁo de repetiÁ„o aninhado." + RESET;
+    private static String p5 = NEGRITO + "\nEscolha a op√ß√£o que descreve como o break funciona quando √© utilizado dentro de um la√ßo de repeti√ß√£o aninhado." + RESET;
 
-    private static String p6 = NEGRITO + "O laÁo de repetiÁ„o abaixo est· formando uma metade de uma pir‚mide, sendo criada por linhas e colunas. PorÈm o cÛdigo n„o est· rodando, o porquÍ o laÁo de repetiÁ„o for n„o est· rodando?\n" + RESET
+    private static String p6 = NEGRITO + "O la√ßo de repeti√ß√£o abaixo est√° formando uma metade de uma pir√¢mide, sendo criada por linhas e colunas. Por√©m o c√≥digo n√£o est√° rodando, o porqu√™ o la√ßo de repeti√ß√£o for n√£o est√° rodando?\n" + RESET
             + PURPLE + "for " + RESET + "(int" + GREEN + " linha " + PURPLE + "= " + BLUE + "0" + RESET + "; " + GREEN + "linha" + PURPLE + " < " + BLUE + "10" + RESET + "; " + GREEN + "linha " + PURPLE + "+" + GREEN + " linha" + RESET + "){\n" +
             PURPLE + "    for " + RESET + "(int" + GREEN + " coluna " + PURPLE + "= " + BLUE + "0" + RESET + "; " + GREEN + "coluna" + PURPLE + " <= " + BLUE + "10" + RESET + "; " + GREEN + "coluna" + PURPLE + "++" + RESET + "){\n" +
             "		" + PURPLE + "if " + RESET + "(" + GREEN + "coluna " + PURPLE + "> " + GREEN + "linha" + RESET + ")\n" +
@@ -89,202 +95,200 @@ public class Main {
             + "    int " + GREEN + "opcoes" + PURPLE + " =" + BLUE + " 0" + ";\r\n"
             + "\r\n"
             + GREEN + "		System.out.println" + WHITE + "(\r\n"
-            + "				" + YELLOW + "VocÍ dever· fazer uma apresentaÁ„o para o final do semestre, onde enfretar· o impiedoso OEKAT\\n\"\r\n"
-            + "						+ \"E ter· que escolher uma das opÁıes para se sair bem na apresentaÁ„o, porÈm, toda escolha ter· uma consequencia\\n\"\r\n"
-            + "						+ \"1- VocÍ faz um codigo bem estruturado\\n\"\r\n"
-            + "						+ \"2- A histÛria do seu jogo È a melhor e mais criativa\\n\"\r\n"
-            + "						+ \"3- VocÍ e seu grupo fizeram varias reuniıes e o trabalho est· de acordo com o que foi pedido\\n \"\r\n"
-            + "						+ \"4- Os testes de cÛdigo do seu grupo deram todos certos\\n\"\r\n"
-            + "						+ \"5- VocÍ sabe tudo sobre o cÛdigo e caso alguÈm caia durante a apresentaÁ„o, vocÍ saber· explicar\\n\"" + WHITE + ");\r\n"
+            + "				" + YELLOW + "Voc√™ dever√° fazer uma apresenta√ß√£o para o final do semestre, onde enfretar√° o impiedoso OEKAT\\n\"\r\n"
+            + "						+ \"E ter√° que escolher uma das op√ß√µes para se sair bem na apresenta√ß√£o, por√©m, toda escolha ter√° uma consequencia\\n\"\r\n"
+            + "						+ \"1- Voc√™ faz um codigo bem estruturado\\n\"\r\n"
+            + "						+ \"2- A hist√≥ria do seu jogo √© a melhor e mais criativa\\n\"\r\n"
+            + "						+ \"3- Voc√™ e seu grupo fizeram varias reuni√µes e o trabalho est√° de acordo com o que foi pedido\\n \"\r\n"
+            + "						+ \"4- Os testes de c√≥digo do seu grupo deram todos certos\\n\"\r\n"
+            + "						+ \"5- Voc√™ sabe tudo sobre o c√≥digo e caso algu√©m caia durante a apresenta√ß√£o, voc√™ saber√° explicar\\n\"" + WHITE + ");\r\n"
             + "\r\n"
             + PURPLE + "		switch" + WHITE + " (" + GREEN + "opcoes" + WHITE + ") {\r\n"
             + PURPLE + "		case " + BLUE + "1" + ":\r\n"
-            + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas n„o faz os testes\""
+            + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas n√£o faz os testes\""
             + "\n                   + \"Assim o impiedoso OEKAT tira 5 pontos do seu grupo\"" + ");\r\n"
             + PURPLE + "			break" + WHITE + ";\r\n"
             + "\r\n"
             + PURPLE + "		case" + BLUE + " 2:\r\n"
-            + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas no meio da apresentaÁ„o seu cÛdigo da uma crashada sem querer\"\r\n"
-            + "					+ \"VocÍ atÈ consegue disfarÁar, mas o impiedoso OEKAT tira 2 pontos do seu grupo\"" + WHITE + ");\r\n"
+            + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas no meio da apresenta√ß√£o seu c√≥digo da uma crashada sem querer\"\r\n"
+            + "					+ \"Voc√™ at√© consegue disfar√ßar, mas o impiedoso OEKAT tira 2 pontos do seu grupo\"" + WHITE + ");\r\n"
             + PURPLE + "			break" + WHITE + ";\r\n"
             + "\r\n"
             + PURPLE + "		case" + BLUE + " 3:\r\n"
-            + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas no dia da apresentaÁ„o 3 membros do seu grupo ficam presos no transito\"\r\n"
-            + "					+ \"pois est· tendo um protesto de crianÁas que n„o ganharam um playstation quando ligaram no bom dia e cia\n\"\r\n"
+            + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas no dia da apresenta√ß√£o 3 membros do seu grupo ficam presos no transito\"\r\n"
+            + "					+ \"pois est√° tendo um protesto de crian√ßas que n√£o ganharam um playstation quando ligaram no bom dia e cia\n\"\r\n"
             + "					+ \"Seu grupo atrasa um pouco a aula e o impiedoso OEKAT tira 1 ponto do seu grupo\"" + WHITE + ");\r\n"
             + PURPLE + "			break;\r\n"
             + "\r\n"
             + PURPLE + "		case" + BLUE + "4:\r\n"
-            + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas no dia da apresentaÁ„o vocÍ cai e como a nota È individual\"\r\n"
-            + "					+ \"O impiedoso OEKAT desconta 3 pontos seu, em compensaÁ„o, seu grupo se deu bem \"" + WHITE + ");\r\n"
+            + GREEN + "			System.out.println" + WHITE + "(" + YELLOW + "\"Mas no dia da apresenta√ß√£o voc√™ cai e como a nota √© individual\"\r\n"
+            + "					+ \"O impiedoso OEKAT desconta 3 pontos seu, em compensa√ß√£o, seu grupo se deu bem \"" + WHITE + ");\r\n"
             + PURPLE + "			break;\r\n" + WHITE
             + "		}\r\n"
             + "	}\r\n"
             + "}\r\n\n"
-            + NEGRITO + "De acordo com o cÛdigo acima, podemos afirmar que : \n" + RESET +
+            + NEGRITO + "De acordo com o c√≥digo acima, podemos afirmar que : \n" + RESET +
             "I) Tem case a mais \n" +
-            "II) O cÛdigo est· sem a entrada de dados \n" +
-            "III) A vari·vel est· errada \n" +
+            "II) O c√≥digo est√° sem a entrada de dados \n" +
+            "III) A vari√°vel est√° errada \n" +
             "IV) Tem case a menos \n";
 
-    private static String p9 =NEGRITO + "No que tange funÁıes podemos descrevÍ-las como" + RESET;
+    private static String p9 =NEGRITO + "No que tange fun√ß√µes podemos descrev√™-las como" + RESET;
 
-    private static String p10 = NEGRITO + "Qual o erro do cÛdigo abaixo?\n" + RESET + PURPLE + " static void " + GREEN + "soma" + YELLOW + "(" + PURPLE + "int" + RESET + " a, " + PURPLE + "int" + RESET + " b" + YELLOW + ")" + WHITE + "{\n" +
+    private static String p10 = NEGRITO + "Qual o erro do c√≥digo abaixo?\n" + RESET + PURPLE + " static void " + GREEN + "soma" + YELLOW + "(" + PURPLE + "int" + RESET + " a, " + PURPLE + "int" + RESET + " b" + YELLOW + ")" + WHITE + "{\n" +
             "   " + PURPLE + "return " + WHITE + "a+b;\n" +
             "}" + RESET;
 
     // Respostas
 
     private static ArrayList<String> r1 = new ArrayList<>(Arrays.asList(
-            "",
-            "",
-            "",
-            "",
-            ""));
-
-    private static ArrayList<String> r2 = new ArrayList<>(Arrays.asList(
-            "",
-            "",
-            "",
-            "",
-            ""));
-
-    private static ArrayList<String> r3 = new ArrayList<>(Arrays.asList("(I e II e VI) Est„o corretas",
-            "(I e II e III) Est„o corretas",
-            "(II e V) Est„o corretas (CERTA RESPOSTA)",
-            "(IV e II) Est„o corretas",
-            "(I e IV e V) Est„o corretas",
-            "(I) Est· correta"));
+            "Float, Double e Char",
+            "Char e Byte",
+            "Int, Long e Float",
+            "True e False(CERTA RESPOSTA)"));
+    
+  private static ArrayList<String> r2 = new ArrayList<>(Arrays.asList(
+            "Byte(CERTA RESPOSTA)",
+            "Short",
+            "Int",
+            "Long"));
+    
+    private static ArrayList<String> r3 = new ArrayList<>(Arrays.asList("(I e II e VI) Est√£o corretas",
+            "(I e II e III) Est√£o corretas",
+            "(II e V) Est√£o corretas (CERTA RESPOSTA)",
+            "(IV e II) Est√£o corretas",
+            "(I e IV e V) Est√£o corretas",
+            "(I) Est√° correta"));
 
     private static ArrayList<String> r4 = new ArrayList<>(
-            Arrays.asList("A estrutura IF n„o serve para verificar condicional.",
-                    "A estrutura È iniciada primeiro com IF e a condiÁ„o È entre (). (CERTA RESPOSTA)",
-                    "Tem que declarar uma vari·vel dentro da condiÁ„o para poder executar o cÛdigo.",
-                    "A estrutura n„o pode ter um IF dentro de outro IF.",
-                    "A estrutura sempre ter· um IF dentro de outro IF."));
+            Arrays.asList("A estrutura IF n√£o serve para verificar condicional.",
+                    "A estrutura √© iniciada primeiro com IF e a condi√ß√£o √© entre (). (CERTA RESPOSTA)",
+                    "Tem que declarar uma vari√°vel dentro da condi√ß√£o para poder executar o c√≥digo.",
+                    "A estrutura n√£o pode ter um IF dentro de outro IF.",
+                    "A estrutura sempre ter√° um IF dentro de outro IF."));
 
     private static ArrayList<String> r5 = new ArrayList<>(Arrays.asList(
-            "Finaliza a execuÁ„o do programa no momento em que È chamado.",
-            "Para a execuÁ„o de todos os laÁos de repetiÁ„o aninhados que o contÈm e continua normalmente o programa.",
-            "Para a execuÁ„o do laÁo que contÈm o comando break e continua executando os laÁos mais externos.(CERTA RESPOSTA)",
-            "Ele para todos os laÁos de repetiÁ„o que tem dentro do programa."));
+            "Finaliza a execu√ß√£o do programa no momento em que √© chamado.",
+            "Para a execu√ß√£o de todos os la√ßos de repeti√ß√£o aninhados que o cont√©m e continua normalmente o programa.",
+            "Para a execu√ß√£o do la√ßo que cont√©m o comando break e continua executando os la√ßos mais externos.(CERTA RESPOSTA)",
+            "Ele para todos os la√ßos de repeti√ß√£o que tem dentro do programa."));
 
     private static ArrayList<String> r6 = new ArrayList<>(Arrays.asList(
-            "A estrutura FOR n„o se deve ter outro FOR dentro.",
-            "O cÛdigo n„o est· rodando, pois o break deve ser fora do laÁo de repetiÁ„o FOR.",
-            "A estrutura n„o executa, pois a express„o linha + linha est· incorreta, para seu cÛdigo executa se deve considerar: linha++ ou linha = linha + 1.(CERTA RESPOSTA)",
-            "O cÛdigo n„o vai rodar, pois o IF dentro do for est· sem o ELSE.",
-            "Nenhuma das alternativas, o cÛdigo est· certo."));
+            "A estrutura FOR n√£o se deve ter outro FOR dentro.",
+            "O c√≥digo n√£o est√° rodando, pois o break deve ser fora do la√ßo de repeti√ß√£o FOR.",
+            "A estrutura n√£o executa, pois a express√£o linha + linha est√° incorreta, para seu c√≥digo executa se deve considerar: linha++ ou linha = linha + 1.(CERTA RESPOSTA)",
+            "O c√≥digo n√£o vai rodar, pois o IF dentro do for est√° sem o ELSE.",
+            "Nenhuma das alternativas, o c√≥digo est√° certo."));
 
     private static ArrayList<String> r7 = new ArrayList<>(Arrays.asList(
-            "Vari·veis", "Bibliotecas importadas", "LaÁos de repetiÁ„o", "If else (CERTA RESPOSTA)", "Sysout.out.println"));
+            "Vari√°veis", "Bibliotecas importadas", "La√ßos de repeti√ß√£o", "If else (CERTA RESPOSTA)", "Sysout.out.println"));
 
-    private static ArrayList<String> r8 = new ArrayList<>(Arrays.asList("I e a II est„o corretas",
-            "I e IV est„o corretas",
-            "II e IV est„o corretas(CERTA RESPOSTA)",
-            "II, III e IV est„o corretas",
-            "Todas as afirmativas est„o corretas"));
+    private static ArrayList<String> r8 = new ArrayList<>(Arrays.asList("I e a II est√£o corretas",
+            "I e IV est√£o corretas",
+            "II e IV est√£o corretas(CERTA RESPOSTA)",
+            "II, III e IV est√£o corretas",
+            "Todas as afirmativas est√£o corretas"));
 
 
     private static ArrayList<String> r9 = new ArrayList<>(Arrays.asList(
-            "S„o partes do cÛdigo que possuem objetivos especÌficos, que podem ser chamadas em qualquer parte daquele cÛdigo, e podem retornar algum valor.(CERTA RESPOSTA)",
-            "S„o fragmentos de cÛdigo que sÛ podem ser chamados dentro de ifs",
-            "S„o partes de um mesmo cÛdigo feitos somente para n„o se repetir cÛdigo",
-            "S„o blocos de cÛdigo como if, else, switch, for",
+            "S√£o partes do c√≥digo que possuem objetivos espec√≠ficos, que podem ser chamadas em qualquer parte daquele c√≥digo, e podem retornar algum valor.(CERTA RESPOSTA)",
+            "S√£o fragmentos de c√≥digo que s√≥ podem ser chamados dentro de ifs",
+            "S√£o partes de um mesmo c√≥digo feitos somente para n√£o se repetir c√≥digo",
+            "S√£o blocos de c√≥digo como if, else, switch, for",
             "Nenhuma das outras respostas"));
 
 
     private static ArrayList<String> r10 = new ArrayList<>(Arrays.asList(
-            "Os tipos n„o condizem com soma",
-            "Soma È feita atravÈs de sum(a,b)",
+            "Os tipos n√£o condizem com soma",
+            "Soma √© feita atrav√©s de sum(a,b)",
             "Problema com o tipo de retorno(CERTA RESPOSTA)",
-            "Falta public no inÌcio da funÁ„o",
-            "N„o tem problemas"));
+            "Falta public no in√≠cio da fun√ß√£o",
+            "N√£o tem problemas"));
 
     private static ArrayList<String> ajudas = new ArrayList<>(Arrays.asList(
-            "Lembre-se o IF È uma estrutura para tomadas de decis„o (se isso, faÁa isso)",
-            "Veja, sempre um se, depois um sen„o, e nos se, devem ser envolvidos por parÍnteses",
-            "O break, È uma instruÁ„o para parar a execuÁ„o atual",
-            "For's s„o laÁos de repetiÁ„o, e como todo laÁo de repetiÁ„o È necess·rio haver um metÛdo de sair dele, para evitar o loop infinito",
+            "Lembre-se o IF √© uma estrutura para tomadas de decis√£o (se isso, fa√ßa isso)",
+            "Veja, sempre um se, depois um sen√£o, e nos se, devem ser envolvidos por par√™nteses",
+            "O break, √© uma instru√ß√£o para parar a execu√ß√£o atual",
+            "For's s√£o la√ßos de repeti√ß√£o, e como todo la√ßo de repeti√ß√£o √© necess√°rio haver um met√≥do de sair dele, para evitar o loop infinito",
             "R5",
             "R6",
             "R7",
             "R8",
-            "FunÁıes s„o estruturas que utilizamos para organizar o nosso cÛdigo e realizar tarefas com mais clareza",
-            "Para funÁıes s„o necess·rios tipos de retornos condizentes com o que o cÛdigo est· fazendo"));
+            "Fun√ß√µes s√£o estruturas que utilizamos para organizar o nosso c√≥digo e realizar tarefas com mais clareza",
+            "Para fun√ß√µes s√£o necess√°rios tipos de retornos condizentes com o que o c√≥digo est√° fazendo"));
 
 
     // Historias
-    private static String h1 = "VocÍ acorda obstinado para um novo dia em seu emprego.\n" +
-            "Como sempre est· infeliz com o seu chefe pegando no seu pÈ dia sim, dia tambÈm.\nLogo que chega pela manh„ no escritÛrio encontra Renata, ent„o ela diz:" +
+    private static String h1 = "Voc√™ acorda obstinado para um novo dia em seu emprego.\n" +
+            "Como sempre est√° infeliz com o seu chefe pegando no seu p√© dia sim, dia tamb√©m.\nLogo que chega pela manh√£ no escrit√≥rio encontra Renata, ent√£o ela diz:" +
             "Bom dia ____________";
 
 
-    private static String h2 = "- \"Bom dia (NOME), pronto pra mais um dia do Claudio (Seu chefe), pegando no seu pÈ? rs\" diz Renata. \n" +
-            "- \"Ficou sabendo de ontem?!? Ele simplesmente implicou comigo por que eu cheguei 5 minutos atrasado do almoÁo, assim n„o t· dando,\n vou tentar sair ·rea ou procurar um novo emprego, fiquei sabendo que TI È uma ·rea legal, o pessoal parace ser maluco, mas gente boa\" \n" +
-            "- \"Pois È menino, esse Claudio ta passando dos limites... Enfim acho que se quer isso, deveria tentar mesmo, eu conheÁo um rapaz da ·rea de TI, vou te passar o contato dele, para vocÍs trocarem figurinhas.\"";
+    private static String h2 = "- \"Bom dia (NOME), pronto pra mais um dia do Claudio (Seu chefe), pegando no seu p√©? rs\" diz Renata. \n" +
+            "- \"Ficou sabendo de ontem?!? Ele simplesmente implicou comigo por que eu cheguei 5 minutos atrasado do almo√ßo, assim n√£o t√° dando,\n vou tentar sair √°rea ou procurar um novo emprego, fiquei sabendo que TI √© uma √°rea legal, o pessoal parace ser maluco, mas gente boa\" \n" +
+            "- \"Pois √© menino, esse Claudio ta passando dos limites... Enfim acho que se quer isso, deveria tentar mesmo, eu conhe√ßo um rapaz da √°rea de TI, vou te passar o contato dele, para voc√™s trocarem figurinhas.\"";
 
-    private static String h3 = "Nessa mesma tarde Renata adiciona vocÍ e Jefferson em um grupo para se conversarem\n" +
-            "-\"Opa Jefferson, esse daÌ È o (NOME), È o rapaz que eu te falei que est· tentando entrar na sua ·rea, e ainda n„o conhece muita coisa, vocÍ poderia dar o caminho das pedras pra ele?\"\n" +
-            "-\"Claro que sim Renatinha, o que que vocÍ n„o me pede chorando que eu n„o faÁa rindo?!?\"\n" +
-            "-\"Fala (NOME), tudo certo? Cara vou te passar algumas coisas pra tu ir estudando e ver se gosta da ·rea e tal, vocÍ j· viu as videoaulas do Takeo na internet? S„o bem boas ele passa um conte˙do legal pra quem est· comeÁando\"\n";
+    private static String h3 = "Nessa mesma tarde Renata adiciona voc√™ e Jefferson em um grupo para se conversarem\n" +
+            "-\"Opa Jefferson, esse da√≠ √© o (NOME), √© o rapaz que eu te falei que est√° tentando entrar na sua √°rea, e ainda n√£o conhece muita coisa, voc√™ poderia dar o caminho das pedras pra ele?\"\n" +
+            "-\"Claro que sim Renatinha, o que que voc√™ n√£o me pede chorando que eu n√£o fa√ßa rindo?!?\"\n" +
+            "-\"Fala (NOME), tudo certo? Cara vou te passar algumas coisas pra tu ir estudando e ver se gosta da √°rea e tal, voc√™ j√° viu as videoaulas do Takeo na internet? S√£o bem boas ele passa um conte√∫do legal pra quem est√° come√ßando\"\n";
 
     private static String h4 = "Se passa uma semana, desde a sua conversa com Jefferson\n" +
-            "-\"Fala (NOME), como que tu t·?\" pergunta, Jefferson\n" +
-            "-\"Ahh tamo aÌ nÈ meu...\" vocÍ responde \n" +
-            "-\"Assim que È bom, animado igual um le„o faminto na savana africana, ahahahah, enfim, depois de uma semana,\n" +
-            " acho que deu tempo de tu estudar algumas coisas, vamos a nossa primeira pergunta, para eu poder saber se vocÍ aprendeu algo nesse tempo ou ainda nada.\"\n";
+            "-\"Fala (NOME), como que tu t√°?\" pergunta, Jefferson\n" +
+            "-\"Ahh tamo a√≠ n√© meu...\" voc√™ responde \n" +
+            "-\"Assim que √© bom, animado igual um le√£o faminto na savana africana, ahahahah, enfim, depois de uma semana,\n" +
+            " acho que deu tempo de tu estudar algumas coisas, vamos a nossa primeira pergunta, para eu poder saber se voc√™ aprendeu algo nesse tempo ou ainda nada.\"\n";
 
-    private static String h51 = "-\"Eita, ent„o vocÍ È o bix„o mesmo ein. Parece que estudou pelo menos um pouco, vamos ver se vocÍ aprendeu mesmo sobre esse tema\"\n";
+    private static String h51 = "-\"Eita, ent√£o voc√™ √© o bix√£o mesmo ein. Parece que estudou pelo menos um pouco, vamos ver se voc√™ aprendeu mesmo sobre esse tema\"\n";
 
-    private static String h52 = "-\"…... Como deve ter percebido atÈ o narrador est· tirando uma com a sua cara, e vocÍ vai fazer o que com isso?\" \n" +
-            "Euuuuu particularmente n„o deixava...\" - diz Jefferson \n" +
+    private static String h52 = "-\"√â... Como deve ter percebido at√© o narrador est√° tirando uma com a sua cara, e voc√™ vai fazer o que com isso?\" \n" +
+            "Euuuuu particularmente n√£o deixava...\" - diz Jefferson \n" +
             "\"E eu digo mais... Mais\" - diz o narrador" +
             "\"Bom deixando a zueira de lado, vamos continuar aqui com os nossos desafios\" - dispara Jefferson";
 
-    private static String h61 = "-\"VocÍ estou bem ent„o... Vamos vou te passar uma recomendaÁ„o de livro pra tu dar uma olhada,\n mas mesmo assim eu te aconselho a se inscrever em um curso para poder se aprimorar nisso.\"\n";
+    private static String h61 = "-\"Voc√™ estou bem ent√£o... Vamos vou te passar uma recomenda√ß√£o de livro pra tu dar uma olhada,\n mas mesmo assim eu te aconselho a se inscrever em um curso para poder se aprimorar nisso.\"\n";
 
-    private static String h62 = "-\"Pois È, o narrador, parece estar te zuando mesmo. Enfim, parece que vocÍ atÈ estudou," +
-            "\n mas n„o o tanto que deveria, vou te recomendar estudar mais, e tambem dar uma olhada em algumas referencias de livros por aÌ \"\n";
+    private static String h62 = "-\"Pois √©, o narrador, parece estar te zuando mesmo. Enfim, parece que voc√™ at√© estudou," +
+            "\n mas n√£o o tanto que deveria, vou te recomendar estudar mais, e tambem dar uma olhada em algumas referencias de livros por a√≠ \"\n";
 
-    private static String h7 = "Na mesma noite, vocÍ corre para o computador assim que chega em casa, para dar um olhada nos cursos que existem dentro da ·rea,\n vocÍ percebe que gest„o em TI, n„o È muito a sua cara, nem Bacharel em ciÍncias da computaÁ„o.\n" +
-            "J· tecnÛlogo em analise e desenvolvimento de sistemas, se encaixa perfeitmente no que vocÍ esperava, como È maio, vocÍ j· corre para fazer a sua inscriÁ„o, e passa no vestibular.\n" +
-            "Logo nas primeiras semanas, vocÍ se enturma, e essas pessoas ser„o o seu grupo de PI";
+    private static String h7 = "Na mesma noite, voc√™ corre para o computador assim que chega em casa, para dar um olhada nos cursos que existem dentro da √°rea,\n voc√™ percebe que gest√£o em TI, n√£o √© muito a sua cara, nem Bacharel em ci√™ncias da computa√ß√£o.\n" +
+            "J√° tecn√≥logo em analise e desenvolvimento de sistemas, se encaixa perfeitmente no que voc√™ esperava, como √© maio, voc√™ j√° corre para fazer a sua inscri√ß√£o, e passa no vestibular.\n" +
+            "Logo nas primeiras semanas, voc√™ se enturma, e essas pessoas ser√£o o seu grupo de PI";
 
-    private static String h8 = "Uma das suas primeiras tarefas vem a seguir, È uma ADO de PI.";
+    private static String h8 = "Uma das suas primeiras tarefas vem a seguir, √© uma ADO de PI.";
 
-    private static String h91 = "Na mesma semana, vocÍ encontra Jefferson, nos corredores da empresa, e comenta que est· fazendo faculdade.\n" +
-            "-\"Eai (NOME), est· curtindo?\"\n" +
-            "-\"Estou sim, o pessoal È bem legal\".";
+    private static String h91 = "Na mesma semana, voc√™ encontra Jefferson, nos corredores da empresa, e comenta que est√° fazendo faculdade.\n" +
+            "-\"Eai (NOME), est√° curtindo?\"\n" +
+            "-\"Estou sim, o pessoal √© bem legal\".";
 
-    private static String h92 = "Na mesma semana, vocÍ encontra Jefferson, nos corredores da empresa, vocÍs se cumprimentam e seguem a vida";
+    private static String h92 = "Na mesma semana, voc√™ encontra Jefferson, nos corredores da empresa, voc√™s se cumprimentam e seguem a vida";
 
-    private static String h10 = "-\"Parece que daqui pra frente os exercicios ser„o mais intensos, ent„o È melhor se preparar\" - diz Enzo, seu colega de PI\n" +
-            "J· para o outro dia j· temos mais exercicios para serem feitos.";
+    private static String h10 = "-\"Parece que daqui pra frente os exercicios ser√£o mais intensos, ent√£o √© melhor se preparar\" - diz Enzo, seu colega de PI\n" +
+            "J√° para o outro dia j√° temos mais exercicios para serem feitos.";
 
-    private static String h11 = "Vamos para outro exercÌcio logo em seguida";
+    private static String h11 = "Vamos para outro exerc√≠cio logo em seguida";
 
-    private static String h12 = "VocÍ volta pra casa para descansar durante o fim de semana,\n" +
-            "no domingo vocÍ saÌ para ir pra casa da sua tia Suelita, l· encontra o seu primo Pedro, e comenta com ele que est· fazendo faculdade, \n" +
-            "Pedro È desenvolvedor de jogos, e te ajuda a fazer a prÛxima atividade.";
+    private static String h12 = "Voc√™ volta pra casa para descansar durante o fim de semana,\n" +
+            "no domingo voc√™ sa√≠ para ir pra casa da sua tia Suelita, l√° encontra o seu primo Pedro, e comenta com ele que est√° fazendo faculdade, \n" +
+            "Pedro √© desenvolvedor de jogos, e te ajuda a fazer a pr√≥xima atividade.";
 
-    private static String h131 = "- \"… isso mesmo (NOME), parabÈns, vocÍ est· aprendendo certinho\" - diz Pedro\n" +
-            "- \"Esse È meu menino\", grita a sua m„e da sala";
+    private static String h131 = "- \"√â isso mesmo (NOME), parab√©ns, voc√™ est√° aprendendo certinho\" - diz Pedro\n" +
+            "- \"Esse √© meu menino\", grita a sua m√£e da sala";
 
-    private static String h14 = "J· na prÛxima aula.\n" +
-            "- \"Temos que seguir adiante nos aprendizados\" - diz Fabiano, professor de lÛgica de programaÁ„o\n" +
-            "- \"Ent„o hoje vamos falar sobre switch, a primeira pergunta È...\" - completa Fabiano";
+    private static String h14 = "J√° na pr√≥xima aula.\n" +
+            "- \"Temos que seguir adiante nos aprendizados\" - diz Fabiano, professor de l√≥gica de programa√ß√£o\n" +
+            "- \"Ent√£o hoje vamos falar sobre switch, a primeira pergunta √©...\" - completa Fabiano";
 
-    private static String h151 = "- \"Isto mesmo, o (NOME), como vocÍs podem ver, j· sabe sobre switch, vamos ver ent„o se vocÍ aprendeu direitinho\" - diz Fabiano para toda a sala\n";
+    private static String h151 = "- \"Isto mesmo, o (NOME), como voc√™s podem ver, j√° sabe sobre switch, vamos ver ent√£o se voc√™ aprendeu direitinho\" - diz Fabiano para toda a sala\n";
 
-    private static String h152 = "- \"Uhmmm, n„o È bem assim, mas vamos ver se vocÍ acerta essa...\" - diz Fabiano para toda a sala\n";
+    private static String h152 = "- \"Uhmmm, n√£o √© bem assim, mas vamos ver se voc√™ acerta essa...\" - diz Fabiano para toda a sala\n";
 
-    private static String h16 = "Est· chegando o fim do semestre, e pra isso È necess·rio dar um g·s a mais nos estudo, ent„o nos responda...";
+    private static String h16 = "Est√° chegando o fim do semestre, e pra isso √© necess√°rio dar um g√°s a mais nos estudo, ent√£o nos responda...";
 
-    private static String h171 = "Ent„o j· que È o sabich„o e sabia essa me responda...";
+    private static String h171 = "Ent√£o j√° que √© o sabich√£o e sabia essa me responda...";
 
 
-    //FunÁ„o do jogo
+    //Fun√ß√£o do jogo
     private static void jogar() {
         try {
             historia(1);
@@ -295,7 +299,7 @@ public class Main {
 
             if (desafiosBooleanos(desafio1)) {
                 poderes.add("Perguntar pro Takeo");
-                System.out.println("VocÍ liberou o poder de perguntar para o Takeo, isto poder· ser util em momentos de dificuldades");
+                System.out.println("Voc√™ liberou o poder de perguntar para o Takeo, isto poder√° ser util em momentos de dificuldades");
             }
 
             historia(4);
@@ -313,14 +317,14 @@ public class Main {
             historia(7);
             if (desafiosBooleanos(desafio2)) {
                 poderes.add("Consultar o livro");
-                System.out.println("VocÍ liberou o poder de consultar o livro, pode ser que isso seja ˙til em algum momento");
+                System.out.println("Voc√™ liberou o poder de consultar o livro, pode ser que isso seja √∫til em algum momento");
             }
             historia(8);
             if (pergunta(3)) {
                 historia(91);
                 if (desafiosBooleanos(desafio3)) {
                     poderes.add("Pedir ajuda a Jefferson");
-                    System.out.println("VocÍ liberou o poder de perguntar ao Jefferson, pode ser que ele te ajude em uma dificuldade");
+                    System.out.println("Voc√™ liberou o poder de perguntar ao Jefferson, pode ser que ele te ajude em uma dificuldade");
                 }
             } else {
                 historia(92);
@@ -351,23 +355,23 @@ public class Main {
         }
     }
 
-    //Exibe a pontuaÁ„o que o jogador conseguiu dentro do jogo.
-    //Este retorno sÛ serve para fazer teste
+    //Exibe a pontua√ß√£o que o jogador conseguiu dentro do jogo.
+    //Este retorno s√≥ serve para fazer teste
     public static int exibePontuacao() {
         if (pontuacao == 0) {
-            System.out.println("VocÍ foi demitido do seu emprego, devido a um corte de gasto");
+            System.out.println("Voc√™ foi demitido do seu emprego, devido a um corte de gasto");
         } else if (pontuacao >= 1 && pontuacao <= 4) {
-            System.out.println("PARAB…NSSSSSS\n" +
-                    "Devido ao seu esforÁo de estudos vocÍ recebeu uma proposta de emprego na empresa concorrente, com o cargo de desenvolvedor j˙nior");
+            System.out.println("PARAB√âNSSSSSS\n" +
+                    "Devido ao seu esfor√ßo de estudos voc√™ recebeu uma proposta de emprego na empresa concorrente, com o cargo de desenvolvedor j√∫nior");
         } else if (pontuacao >= 4 && pontuacao <= 6) {
-            System.out.println("PARAB…NSSSSSS\n" +
-                    "Devido ao seu esforÁo de estudos vocÍ recebeu uma proposta de emprego na empresa concorrente, com o cargo de desenvolvedor pleno");
+            System.out.println("PARAB√âNSSSSSS\n" +
+                    "Devido ao seu esfor√ßo de estudos voc√™ recebeu uma proposta de emprego na empresa concorrente, com o cargo de desenvolvedor pleno");
         } else if (pontuacao >= 7 && pontuacao <= 9) {
-            System.out.println("PARAB…NSSSSSS\n" +
-                    "Devido ao seu esforÁo de estudos vocÍ recebeu uma proposta de emprego na empresa em que trabalha, com o cargo de desenvolvedor sÍnior");
+            System.out.println("PARAB√âNSSSSSS\n" +
+                    "Devido ao seu esfor√ßo de estudos voc√™ recebeu uma proposta de emprego na empresa em que trabalha, com o cargo de desenvolvedor s√™nior");
         } else if (pontuacao == 10) {
-            System.out.println("PARAB…NSSSSSS\n" +
-                    "Devido ao seu esforÁo de estudos vocÍ recebeu uma proposta de emprego na empresa concorrente, com o cargo de especialista tÈcnico");
+            System.out.println("PARAB√âNSSSSSS\n" +
+                    "Devido ao seu esfor√ßo de estudos voc√™ recebeu uma proposta de emprego na empresa concorrente, com o cargo de especialista t√©cnico");
         }
         return pontuacao;
     }
@@ -388,7 +392,7 @@ public class Main {
         for (int i = 0; i < menuList.size(); i++) {
             System.out.println(i + 1 + ") " + menuList.get(i));
         }
-        System.out.print("Selecione para qual opÁ„o deseja seguir: ");
+        System.out.print("Selecione para qual op√ß√£o deseja seguir: ");
         int resp = scan.nextInt();
 
         switch (resp) {
@@ -405,23 +409,23 @@ public class Main {
                 System.exit(0);
                 break;
             default:
-                System.out.println("VocÍ selecionou uma opÁ„o invalida, tente novamente");
+                System.out.println("Voc√™ selecionou uma op√ß√£o invalida, tente novamente");
                 menu();
                 break;
         }
     }
 
-    //Imprime crÈditos
+    //Imprime cr√©ditos
     private static void creditos() {
-        System.out.println("Este jogo foi desenvolvido com esmÈro por:\n\n" +
-                "Alexandre Alves Silva\nErick Santos Rocha\nKauÍ Campos de Lima\nPaulo Belfi\nValdiran Jesus Cruz\n");
+        System.out.println("Este jogo foi desenvolvido com esm√©ro por:\n\n" +
+                "Alexandre Alves Silva\nErick Santos Rocha\nKau√™ Campos de Lima\nPaulo Belfi\nValdiran Jesus Cruz\n");
         menu();
     }
 
-    //Imprime as instruÁıes do jogo
+    //Imprime as instru√ß√µes do jogo
     private static void instrucoes() {
-        System.out.println("\nO jogo se baseia no genero RPG de texto, ser· necessario colocar em uso o seu conhecimento de programaÁ„o\npara responder as mais diversas perguntas sobre desenvolvimento, ent„o" +
-                " se prepare aventureiro, vamos entrar de cabeÁa nesse mundo.\n\n");
+        System.out.println("\nO jogo se baseia no genero RPG de texto, ser√° necessario colocar em uso o seu conhecimento de programa√ß√£o\npara responder as mais diversas perguntas sobre desenvolvimento, ent√£o" +
+                " se prepare aventureiro, vamos entrar de cabe√ßa nesse mundo.\n\n");
         menu();
     }
 
@@ -566,7 +570,7 @@ public class Main {
     public static boolean imprimirRespostaErrada(ArrayList<String> possiblidades, long tempo) throws InterruptedException {
         Random rand = new Random();
         //pega uma resposta aleatoria da array de respostas possiveis, e imprime ela
-        //utilizando metodo de impress„o digitada
+        //utilizando metodo de impress√£o digitada
         String texto = possiblidades.get(rand.nextInt(possiblidades.size()));
 
         imprimir(texto,tempo);
@@ -577,16 +581,16 @@ public class Main {
     //Recebe o array de perguntas a serem impressas sem as suas letras correspondentes
     public static boolean imprimirQuestao(ArrayList<String> respostas, int id) {
         Scanner scan = new Scanner(System.in);
-        //embaralha as perguntas para n„o ser sempre a mesma opÁ„o
+        //embaralha as perguntas para n√£o ser sempre a mesma op√ß√£o
         Collections.shuffle(respostas);
 
         String respostaCerta = "";
         ArrayList<String> listaRespostas = new ArrayList<>();
 
 
-        //laÁo para imprir as respostas
+        //la√ßo para imprir as respostas
         for (int i = 0; i < respostas.size(); i++) {
-            //Verifica qual È a resposta correta apÛs o embaralhamento
+            //Verifica qual √© a resposta correta ap√≥s o embaralhamento
             if (respostas.get(i).indexOf("(CERTA RESPOSTA)") != -1) {
                 respostaCerta = Character.toString((char) i + 97);
             }
@@ -605,9 +609,9 @@ public class Main {
 
         //controle de ajudas
         if (resp.toUpperCase(Locale.ROOT).equals("P")) {
-            //se poderes forem iguais a 0 n„o deve fazer nada
+            //se poderes forem iguais a 0 n√£o deve fazer nada
             if (poderes.size() == 0) {
-                System.out.println("VocÍ n„o tem poderes, teremos que seguir sem utilizar ajuda.");
+                System.out.println("Voc√™ n√£o tem poderes, teremos que seguir sem utilizar ajuda.");
                 return imprimirQuestao(respostas, id);
             }
             //Poderes/ajudas
@@ -619,9 +623,9 @@ public class Main {
             return imprimirQuestao(respostas, id);
         }
 
-        //verifica se a resposta dada È v·lida ao conjunto de respostas validas
+        //verifica se a resposta dada √© v√°lida ao conjunto de respostas validas
         else if (listaRespostas.indexOf(resp) == -1) {
-            System.out.println("Esta resposta È inv·lida, tente apenas respostas validas.\nTente novamente.\n\n");
+            System.out.println("Esta resposta √© inv√°lida, tente apenas respostas validas.\nTente novamente.\n\n");
             imprimirQuestao(respostas, id);
         }
         return respostaCerta.toUpperCase(Locale.ROOT).equals(resp.toUpperCase(Locale.ROOT));
@@ -630,7 +634,7 @@ public class Main {
     //imprime os poderes possiveis do jogador
     private static int imprimePoderes() {
         Scanner scan = new Scanner(System.in);
-        //faz um laÁo na arrai para imprimir todos os poderes possiveis
+        //faz um la√ßo na arrai para imprimir todos os poderes possiveis
         for (int i = 0; i < poderes.size(); i++) {
             //Character.toString((char) i + 97) = tabela ascii
             System.out.println(Character.toString((char) i + 97) + ") " + poderes.get(i));
@@ -638,10 +642,10 @@ public class Main {
 
         System.out.print("Selecione qual poder deseja utilizar: ");
         String resp = scan.next();
-        //verifica se a resposta dada È v·lida, n„o pode ser -1 nem maior do que a quantidade de poderes -1
+        //verifica se a resposta dada √© v√°lida, n√£o pode ser -1 nem maior do que a quantidade de poderes -1
         int respEmASC = resp.toLowerCase(Locale.ROOT).toCharArray()[0] - 97;
         if (respEmASC < 0 || respEmASC > poderes.size()-1) {
-            System.out.println("Este poder n„o existe, tente novamente");
+            System.out.println("Este poder n√£o existe, tente novamente");
             return imprimePoderes();
         }
         //retorna indice da resposta
@@ -649,7 +653,7 @@ public class Main {
     }
 
 
-    //FunÁ„o para setar o nome do jogador
+    //Fun√ß√£o para setar o nome do jogador
     public static void setNomeJogador() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Digite o seu nome para continuarmos");
@@ -662,7 +666,7 @@ public class Main {
 
     public static boolean desafiosBooleanos(String pergunta) {
         System.out.println(pergunta);
-        System.out.println("Responda com S (Sim) ou N (N„o): ");
+        System.out.println("Responda com S (Sim) ou N (N√£o): ");
         Scanner scan = new Scanner(System.in);
 
         return scan.next().toUpperCase(Locale.ROOT).equals("S");
