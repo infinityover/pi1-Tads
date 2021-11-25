@@ -47,8 +47,8 @@ public class Main {
     private static String p2 = NEGRITO + "Neste código abaixo qual tipo variável não mostrará em tela o número -134. \n" +
             PURPLE+"public class"+GREEN+" PerguntasProjeto"+WHITE+"{\n" +
             PURPLE+"  public static "+WHITE+"void "+GREEN+"main"+WHITE+"("+GREEN+"string"+WHITE+"[] "+GREEN+"args"+WHITE+"){\n" +
-            GREEN+"    questao2 "+PURPLE+"= -"+BLUE+"134;\n" +
-            GREEN+"    System"+WHITE+"."+GREEN+"out"+WHITE+"."+GREEN+"println"+WHITE+"("+GREEN+" teste"+WHITE+" );\n" +
+            GREEN+"    (Tipo) questao2 "+PURPLE+"= -"+BLUE+"134;\n" +
+            GREEN+"    System"+WHITE+"."+GREEN+"out"+WHITE+"."+GREEN+"println"+WHITE+"("+GREEN+" questao2"+WHITE+" );\n" +
             "  }\n" +
             "}" + RESET;
 
@@ -205,14 +205,14 @@ public class Main {
             "Não tem problemas"));
 
     private static ArrayList<String> ajudas = new ArrayList<>(Arrays.asList(
+            "As variáveis booleanas são sempre verdadeiras ou falsas",
+            "Long, Short, Int são tipos de variaveis numericas",
             "Lembre-se o IF é uma estrutura para tomadas de decisão (se isso, faça isso)",
             "Veja, sempre um se, depois um senão, e nos se, devem ser envolvidos por parênteses",
             "O break, é uma instrução para parar a execução atual",
             "For's são laços de repetição, e como todo laço de repetição é necessário haver um metódo de sair dele, para evitar o loop infinito",
-            "R5",
-            "R6",
-            "R7",
-            "R8",
+            "Switch case, pode ser dito como uma forma menos verbosa de se escrever ifs",
+            "O correto de switch case, são ter todas as condições possiveis de um condicional, ou a generalização deles (default)",
             "Funções são estruturas que utilizamos para organizar o nosso código e realizar tarefas com mais clareza",
             "Para funções são necessários tipos de retornos condizentes com o que o código está fazendo"));
 
