@@ -638,8 +638,8 @@ public class Main {
         System.out.print("Selecione qual poder deseja utilizar: ");
         String resp = scan.next();
         //verifica se a resposta dada é válida, não pode ser -1 nem maior do que a quantidade de poderes -1
-        if (resp.toLowerCase(Locale.ROOT).toCharArray()[0] - 97 < 0 ||
-                resp.toLowerCase(Locale.ROOT).toCharArray()[0] - 97 > poderes.size()-1) {
+        int respEmASC = resp.toLowerCase(Locale.ROOT).toCharArray()[0] - 97;
+        if (respEmASC < 0 || respEmASC > poderes.size()-1) {
             System.out.println("Este poder não existe, tente novamente");
             return imprimePoderes();
         }
