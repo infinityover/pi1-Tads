@@ -504,40 +504,40 @@ public class Main {
 
             case 1:
                 imprimir(p1, tempo);
-                return pontuar(imprimirQuestao(r1, id));
+                return pontuar(imprimirRespostas(r1, id));
 
             case 2:
                 imprimir(p2, tempo);
-                return pontuar(imprimirQuestao(r2, id));
+                return pontuar(imprimirRespostas(r2, id));
 
             case 3:
                 imprimir(p3, tempo);
-                return pontuar(imprimirQuestao(r3, id));
+                return pontuar(imprimirRespostas(r3, id));
 
             case 4:
                 imprimir(p4, tempo);
-                return pontuar(imprimirQuestao(r4, id));
+                return pontuar(imprimirRespostas(r4, id));
             case 5:
                 imprimir(p5, tempo);
-                return pontuar(imprimirQuestao(r5, id));
+                return pontuar(imprimirRespostas(r5, id));
             case 6:
                 imprimir(p6, tempo);
-                return pontuar(imprimirQuestao(r6, id));
+                return pontuar(imprimirRespostas(r6, id));
 
             case 7:
                 imprimir(p7, tempo);
-                return pontuar(imprimirQuestao(r7, id));
+                return pontuar(imprimirRespostas(r7, id));
 
             case 8:
                 imprimir(p8, tempo);
-                return pontuar(imprimirQuestao(r8, id));
+                return pontuar(imprimirRespostas(r8, id));
 
             case 9:
                 imprimir(p9, tempo);
-                return pontuar(imprimirQuestao(r9, id));
+                return pontuar(imprimirRespostas(r9, id));
             case 10:
                 imprimir(p10, tempo);
-                return pontuar(imprimirQuestao(r10, id));
+                return pontuar(imprimirRespostas(r10, id));
             default:
                 return false;
         }
@@ -579,7 +579,7 @@ public class Main {
     }
 
     //Recebe o array de perguntas a serem impressas sem as suas letras correspondentes
-    public static boolean imprimirQuestao(ArrayList<String> respostas, int id) {
+    public static boolean imprimirRespostas(ArrayList<String> respostas, int id) {
         Scanner scan = new Scanner(System.in);
         //embaralha as perguntas para não ser sempre a mesma opção
         Collections.shuffle(respostas);
@@ -612,7 +612,7 @@ public class Main {
             //se poderes forem iguais a 0 não deve fazer nada
             if (poderes.size() == 0) {
                 System.out.println("Você não tem poderes, teremos que seguir sem utilizar ajuda.");
-                return imprimirQuestao(respostas, id);
+                return imprimirRespostas(respostas, id);
             }
             //Poderes/ajudas
             int ajudaGasta = imprimePoderes();
@@ -620,13 +620,13 @@ public class Main {
             System.out.println(ajudas.get(id-1));
             //remove o poder selecionado
             poderes.remove(ajudaGasta);
-            return imprimirQuestao(respostas, id);
+            return imprimirRespostas(respostas, id);
         }
 
         //verifica se a resposta dada é válida ao conjunto de respostas validas
         else if (listaRespostas.indexOf(resp) == -1) {
             System.out.println("Esta resposta é inválida, tente apenas respostas validas.\nTente novamente.\n\n");
-            imprimirQuestao(respostas, id);
+           return imprimirRespostas(respostas, id);
         }
         return respostaCerta.toUpperCase(Locale.ROOT).equals(resp.toUpperCase(Locale.ROOT));
     }
